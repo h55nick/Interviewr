@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Exercise do
-  let(:exercise) {Exercise.create(question: 'Wnat is Ruby?', difficulty: 5, cost: 3.5, is_public: true, code_num: 5)}
+  let(:exercise) {Exercise.create(question: 'What is Ruby?', difficulty: 5, cost: 3.5, is_public: true, code: 5)}
 
   describe '.new' do
     it 'creates an instance of Exercise' do
