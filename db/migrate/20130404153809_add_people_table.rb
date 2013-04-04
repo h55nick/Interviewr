@@ -11,6 +11,7 @@ class AddPeopleTable < ActiveRecord::Migration
       t.float :lat
       t.float :long
       t.integer :customer_id
+      t.timestamps
     end
   end
 end
