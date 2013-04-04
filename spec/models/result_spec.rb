@@ -1,4 +1,4 @@
-require 'spec-helper'
+require 'spec_helper'
 
 describe Result do
   describe '#create' do
@@ -11,7 +11,7 @@ describe Result do
     expect(person.id).to_not be nil
     expect(quiz.id).to_not be nil
     expect(person.results).to_not be nil
-    expect(person.results.score).to be 99
+    expect(person.results.first.score).to eq 99.0
     end
   end
 end
