@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: exercises
+#
+#  id         :integer          not null, primary key
+#  question   :text
+#  difficulty :integer
+#  rating     :float
+#  is_public  :boolean
+#  code       :string(255)
+#  cost       :float
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Exercise do
