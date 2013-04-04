@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404160240) do
+ActiveRecord::Schema.define(:version => 20130404170532) do
 
   create_table "exercises", :force => true do |t|
     t.text     "question"
@@ -32,16 +32,33 @@ ActiveRecord::Schema.define(:version => 20130404160240) do
   end
 
   create_table "people", :force => true do |t|
-    t.string  "name"
-    t.text    "address"
-    t.string  "email"
-    t.string  "password_digest"
-    t.string  "phone"
-    t.text    "image_file"
-    t.float   "balance"
-    t.float   "lat"
-    t.float   "long"
-    t.integer "customer_id"
+    t.string   "name"
+    t.text     "address"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "phone"
+    t.text     "image_file"
+    t.float    "balance"
+    t.float    "lat"
+    t.float    "long"
+    t.integer  "customer_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "quizzes", :force => true do |t|
+    t.string   "name"
+    t.integer  "person_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "results", :force => true do |t|
+    t.integer  "person_id"
+    t.integer  "quiz_id"
+    t.float    "score"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "tags", :force => true do |t|

@@ -1,15 +1,14 @@
 # == Schema Information
 #
-# Table name: options
+# Table name: quizzes
 #
 #  id         :integer          not null, primary key
-#  answer     :text
-#  is_correct :boolean
+#  name       :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Option < ActiveRecord::Base
-  attr_accessible :answer, :is_correct
-  belongs_to :exercises
+class Quiz < ActiveRecord::Base
+  attr_accessible :name
+  has_many :results
 end
