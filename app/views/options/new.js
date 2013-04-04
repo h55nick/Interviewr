@@ -1,0 +1,1 @@
+$('#options_form').empty().append('<%=j render partial: 'form' %>');
