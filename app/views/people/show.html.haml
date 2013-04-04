@@ -1,11 +1,22 @@
-This is a Person
-
 #profile_image
-  =image_tag(@person.image_file)
-  #highlights
-    .tests_taken
+  =image_tag(@person.image_file, :id=> 'profile_pic')
+  #stats
+    .tests_taken.inline
       34
-    .high_score
+    .high_score.inline
       90%
-    .mosttags
+    .mosttags.inline
       Ruby
+  %br
+  #bio.inline
+    %h1=@auth.name
+
+#test_table
+  //=render "test_table"
+  Table stuff here
+#map
+  Map goes here
+=link_to('Add Question', "#")
+
+#graph
+  graph goes here
