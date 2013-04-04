@@ -1,0 +1,6 @@
+class Exercise < ActiveRecord::Base
+  attr_accessible :question, :difficulty, :rating, :cost, :owner_id, :is_public, :code
+  has_many :tags
+  has_many :results
+  has_many :options
+end
