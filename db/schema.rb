@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404152755) do
+ActiveRecord::Schema.define(:version => 20130404153655) do
+
+  create_table "exercises", :force => true do |t|
+    t.text     "question"
+    t.integer  "difficulty"
+    t.float    "rating"
+    t.boolean  "is_public"
+    t.string   "code"
+    t.float    "cost"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "tags", :force => true do |t|
     t.string   "name"
