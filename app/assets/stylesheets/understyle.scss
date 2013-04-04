@@ -1,9 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700,900,100italic,700italic,900italic);
+
 body{
-background-color: #f6f7fa;
+background-color: #3a3a3a;
 }
 .tcenter{
   text-align: center;
 }
 .inline{
   display: inline-block;
+}
+h1{
+  color: #ff6666;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300px;
+}
+.button{
+  background-color: #999;
+}
+.sidebar{
+  border: 3px solid #456;
+  background-color: #999;
+  height: 700px;
+  margin-top: 250px;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 100
+}
+p{
+  color: #456
+}
+.new_quizzes{
+  border: 3px solid #456;
+  background-color: #999;
+  height: 700px;
+  margin-top: 250px;
+}
+.new_quizzes_text{
+  font-family: 'Lato', sans-serif;
+  font-size: 48px;
+  font-weight: 100;
 }
