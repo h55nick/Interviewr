@@ -10,6 +10,7 @@ gem 'geocoder'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
+gem 'remotipart'
 
 group :assets do
   gem 'sass-rails'

@@ -5,6 +5,10 @@ class PeopleController < ApplicationController
     @person = Person.new
   end
   def create
-    @person = Person.create
+    @person = Person.create(params[:person])
   end
+  def show
+    @person = Person.find(params[:id])
+  end
+
 end
