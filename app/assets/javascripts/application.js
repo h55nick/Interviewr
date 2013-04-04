@@ -8,6 +8,7 @@
 //= require d3.v3.min
 //= require morris.min
 //= require jquery-ui-1.10.2.custom.min
+//= require jquery.remotipart
 //= require clear_form
 //= require ajax
 

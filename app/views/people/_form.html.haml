@@ -1,10 +1,10 @@
-= form_for @person, :remote => true do |f|
+= form_for @person, :html => {:multipart => true}, :remote => true do |f|
   = f.label :name
   = f.text_field :name
   = f.label :email
   = f.text_field :email
   = f.label 'Profile Picture'
-  = f.text_field :image_file
+  = f.file_field :image_file
   = f.label :address
   = f.text_field :address
   = f.label :phone
