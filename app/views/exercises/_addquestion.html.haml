@@ -1,0 +1,9 @@
+.row
+  .large-12.columns
+    = form_for @exercise, :remote => true do |f|
+      = f.label :question
+      = f.text_field :question, nil, :autofocus => true
+      = link_to('Add Answer', '#', :class => 'button success radius tiny')
+      /another normal button (add answer)
+      = render 'addanswers'
+      /render partial here when button clicked
