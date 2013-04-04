@@ -16,7 +16,17 @@
 #
 
 class Person < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :address, :password, :password_confirmation, :phone, :image_file, :balance, :lat, :long, :customer_id, :is_house
   has_many :results
   has_secure_password
+  mount_uploader :image_file, PhotosUploaderUploader
+
+  after_save :geocode
+  def geocode
+    result = Geocoder.search(self.address).first
+    if result.present?
+      self.lat = result.latitude
+      self.long = result.longitude
+    end
+  end
 end
