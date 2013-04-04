@@ -7,4 +7,8 @@ class PeopleController < ApplicationController
   def create
     @person = Person.create(params[:person])
   end
+  def show
+    @person = Person.find(params[:id])
+  end
+
 end

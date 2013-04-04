@@ -20,9 +20,9 @@ class Person < ActiveRecord::Base
   has_many :results
   has_secure_password
 
+  after_save :geocode
   def geocode
     result = Geocoder.search(self.address).first
-
     if result.present?
       self.lat = result.latitude
       self.long = result.longitude
