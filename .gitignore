@@ -18,3 +18,5 @@
 #ignore the localized database.yml
 /config/database.yml
 
+#ignore migrations conflicts
+/db/schema.rb
