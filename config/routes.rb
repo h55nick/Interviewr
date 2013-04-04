@@ -5,5 +5,6 @@ RailJumper::Application.routes.draw do
   delete '/login' => 'session#destroy'
 
   resources :people
+  resources :quiz
 
 end
