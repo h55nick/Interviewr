@@ -16,5 +16,5 @@
 *.DS_STORE
 
 #ignore the localized database.yml
-database.yml
+/config/database.yml
 
