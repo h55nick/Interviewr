@@ -5,6 +5,8 @@ window.app =
   clear_form: (e) ->
     e.preventDefault()
     $('#form').empty()
-
+   clear_login: () ->
+     $('#login_form').remove()
+     $('#login').children().show();
 
 $(document).ready(app.document_ready)
