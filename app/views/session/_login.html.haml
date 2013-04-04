@@ -1,7 +1,5 @@
 =form_tag '/login', :remote => true do
-    = label_tag :email
-    = text_field_tag :email, nil, :id => 'login_email', :placeholder => 'Email'
-    = label_tag :password
-    = password_field_tag :password, nil, :id => 'login_password', :placeholder => 'Password'
-    = button_to_function('Cancel', 'clear_login()', :class => 'form_buttons form_buttons', :id => 'login_cancel')
-    = submit_tag 'Login', :class => 'button radius'
+    = text_field_tag :email, nil, :id => 'login_email', :placeholder => 'Email', :class=>'inline', :autofocus => true
+    = password_field_tag :password, nil, :id => 'login_password', :placeholder => 'Password', :class=>'inline'
+    = button_to_function('Cancel', 'clear_login()', :class => 'form_buttons form_buttons inline', :id => 'login_cancel')
+    = submit_tag 'Login', :class => 'button radius inline'
