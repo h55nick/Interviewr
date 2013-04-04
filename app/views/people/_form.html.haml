@@ -4,7 +4,7 @@
   = f.label :email
   = f.text_field :email
   = f.label 'Profile Picture'
-  = f.text_field :img_file
+  = f.text_field :image_file
   = f.label :address
   = f.text_field :address
   = f.label :phone
@@ -17,5 +17,5 @@
   = f.password_field :password
   = f.label :password_confirmation
   = f.password_field :password_confirmation
-  = link_to('Cancel', :'data-cancel-form', :class => 'button radius tiny alert')
+  = link_to('Cancel', nil, :'data-cancel-form' => true, :class => 'button radius tiny alert')
   = f.submit nil, :class => 'button radius tiny success'
