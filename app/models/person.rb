@@ -19,4 +19,13 @@ class Person < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   has_many :results
   has_secure_password
+
+  def geocode
+    result = Geocoder.search(self.address).first
+
+    if result.present?
+      self.lat = result.latitude
+      self.long = result.longitude
+    end
+  end
 end
