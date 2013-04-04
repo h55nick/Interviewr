@@ -1,10 +1,10 @@
 require 'spec_helper'
 describe Tag do
-  let(:tag) {Tag.create(name: 'rails')}
+#  let(:tag) {Tag.create(name: 'rails')}
 
   describe '.new' do
     it 'creates an instance of a tag' do
-      Tag = Tag.new
+      tag = Tag.new
       expect(tag).to be_an_instance_of(Tag)
     end
   end
