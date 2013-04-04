@@ -11,4 +11,7 @@
 class Quiz < ActiveRecord::Base
   attr_accessible :name
   has_many :results
+  has_many :exercises
+  has_many :tags
+  belongs_to :person
 end
