@@ -1,0 +1,21 @@
+= form_for @person, :remote => true do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :email
+  = f.text_field :email
+  = f.label 'Profile Picture'
+  = f.text_field :img_file
+  = f.label :address
+  = f.text_field :address
+  = f.label :phone
+  = f.text_field :phone
+  = f.label :address
+  = f.text_field :address
+  = f.label :balance
+  = f.text_field :balance
+  = f.label :password
+  = f.password_field :password
+  = f.label :password_confirmation
+  = f.password_field :password_confirmation
+  = link_to('Cancel', :'data-cancel-form', :class => 'button radius tiny alert')
+  = f.submit nil, :class => 'button radius tiny success'
