@@ -16,7 +16,7 @@
 #
 
 class Person < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :address, :password, :password_confirmation, :phone, :image_file, :balance, :lat, :long, :customer_id, :is_house
   has_many :results
   has_secure_password
 
