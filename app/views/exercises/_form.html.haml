@@ -1,0 +1,13 @@
+.row
+  .large-12.columns
+    = form_for @exercise, :remote => true do |f|
+      .hide= text_field_tag(:id, @exercise.id)
+      = f.label :question
+      = f.text_field :question, nil, :autofocus => true
+      /another normal button (add answer)
+      = link_to('Add Answer', '#', :class => 'button success radius tiny')
+      /render partial here when button clicked
+      = render '/options/_form.html.haml'
+      /submit button for exercise
+      = f.submit nil, :class => 'button success'
+

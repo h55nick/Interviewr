@@ -1,0 +1,9 @@
+.row
+  .large-12.columns
+    = form_for @option, :remote => true do |f|
+      = f.label :is_correct
+      = f.check_box{:'data-exercise-id' => @exercise.id, :'data-auth-token' => form_authenticity_token}
+      = f.label :answer
+      = f.text_field :answer, nil, :autofocus => true
+      /another normal button (add answer)
+      = link_to('Add Answer', '#', :class => 'button success radius tiny')
