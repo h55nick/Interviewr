@@ -6,5 +6,7 @@ RailJumper::Application.routes.draw do
 
   resources :people
   resources :quiz
-
+  resources :tags, :only => [:create]
+  resources :options, :only => [:create]
+  resources :exercises, :only => [:create]
 end
