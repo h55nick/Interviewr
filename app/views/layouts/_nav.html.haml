@@ -9,13 +9,13 @@
         =link_to(image_tag("pencil.svg", :size => '50x50'))
         %p Quizzes
       %li
-        =link_to(image_tag("new_person.svg", :size => '50x50'))
-        %p Register
+        =link_to(image_tag("find_developer.svg", :size => '50x50'))
+        %p Find
+        %p Talent
       - if @auth.nil?
         %li
-          =link_to(image_tag("find_developer.svg", :size => '50x50'), new_person_path, :remote=>true)
-          %p Find
-          %p Talent
+          =link_to(image_tag("new_person.svg", :size => '50x50'), new_person_path, :remote=>true)
+          %p Register
         #login.inline
         %li
           =link_to(image_tag("login.svg", :size => '50x50'), login_path, :remote=>true)
