@@ -42,4 +42,26 @@ class Quiz < ActiveRecord::Base
     (tscore/totalpos) * 100
   end
 
+  def overall_difficulty
+    diffs = []
+    self.exercises.each do |exercise|
+      diff = exercise.difficulty
+      diffs << diff
+      end
+      total = diffs.reduce(:+).to_f
+      average = total/(self.exercises.count).to_i
+      average = (average * 100).round.to_f / 100
+  end
+
+  def overall_rating
+    ratings = []
+    self.exercises.each do |exercise|
+      rating = exercise.rating
+      ratings << rating
+      end
+      total = ratings.reduce(:+).to_f
+      average = total/(self.exercises.count).to_i
+      average = (average * 100).round.to_f / 100
+  end
+
 end
