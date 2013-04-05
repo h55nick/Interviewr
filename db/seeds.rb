@@ -65,3 +65,6 @@ p3.results = [r5, r6]
 q1.results = [r1, r2]
 q2.results = [r3, r4]
 q3.results = [r5, r6]
+
+p1.quizzes = [q1, q2]
+p2.quizzes = [q3]
