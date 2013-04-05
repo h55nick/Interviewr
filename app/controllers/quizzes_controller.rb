@@ -9,6 +9,7 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.create(params[:quiz])
   end
   def show
-    @quiz = Quiz.find(params[:id])
+    @quizzes = Quiz.all
+    @quiz = Quiz.first
   end
 end

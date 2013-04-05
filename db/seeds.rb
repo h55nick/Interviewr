@@ -10,3 +10,5 @@ p2 = Person.create(name: 'Jess', address: '50 8th Avenue, Manhattan, NY', email:
 p3 = Person.create(name: 'Jan', address: '106 Ridge Street, Manhattan, NY', email: 'jan@gmail.com', password: 'a', password_confirmation: 'a', phone: '96847256', image_file: 'jess.JPG')
 
 e1 = Exercise.create(question: 'What is the difference between a Symbol and String?', difficulty: '5', rating: '4', is_public: true, cost: 5.50)
+
+q1 = Quiz.create(name: 'Ruby Findamentals')
