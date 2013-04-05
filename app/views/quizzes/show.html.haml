@@ -9,12 +9,11 @@
     %th Last Score
     %th Avg Score
     %th Number of Attempts
-  - @quizzes.each do |q|
     %tr
+      %td= @quiz.name
       %td= q.name
-      %td= q.name
-      / %td- q.results.each do |r|
-      / %td= r.score
+      %td- q.results.each do |result|
+      %td= re.score
       / %td=/{:'data-created' => }
       / %td/ =
       / %td/ =
