@@ -61,8 +61,31 @@ p{
 .footer{
   color: #999;
 }
+.right.button-group {
+  width: 400px;
 
+  li{
+  padding-right: 25px;
+  color: #3a3a3a;
+    &:hover {
+      color: #ff6666;
+    }
+  }
 
+  p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: inherit;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+
+  }
+}
 /****FORMS****/
 
 #form{

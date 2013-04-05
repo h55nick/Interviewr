@@ -1,24 +1,29 @@
 .row
   .small-3.columns
     .logo
-      .logo1 code
-      .logo2 quiz
+      .logo1 &lt code &gt
+      .logo2 &lt /quiz &gt
   .small-9.columns
     %ul.right.button-group
       %li
-        / %a.button{:href => "#"} Browse Quizzes
         =link_to(image_tag("pencil.svg", :size => '50x50'))
+        %p Quizzes
       %li
         =link_to(image_tag("new_person.svg", :size => '50x50'))
+        %p Register
       - if @auth.nil?
-        %li= link_to(image_tag("find_developer.svg", :size => '50x50'), new_person_path, :remote=>true)
+        %li
+          =link_to(image_tag("find_developer.svg", :size => '50x50'), new_person_path, :remote=>true)
+          %p Find
+          %p Talent
         #login.inline
-        %li= link_to(image_tag("login.svg", :size => '50x50'), login_path, :remote=>true)
+        %li
+          =link_to(image_tag("login.svg", :size => '50x50'), login_path, :remote=>true)
+          %p Login
       - else
         %li
           = link_to('Dashboard', person_path(@auth), :class=>'button', )
         %li
           =link_to(image_tag("user.svg", :size => '50x50'), login_path)
           / = link_to('Logout', login_path, :class=>'button alert', method:"DELETE")
-#form
-
+#pencil_nav
