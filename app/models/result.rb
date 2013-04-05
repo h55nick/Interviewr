@@ -14,4 +14,11 @@ class Result < ActiveRecord::Base
   attr_accessible :person_id, :quiz_id, :score
   belongs_to :person
   belongs_to :quiz
+
+  def owner
+    id = self.person_id
+    person = Person.where(:id => id).first
+    name = person.name
+  end
 end
+

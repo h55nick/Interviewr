@@ -6,7 +6,12 @@ RailJumper::Application.routes.draw do
 
   resources :people
 
-  resources :quizzes
+  resources :quizzes do
+    collection do
+      get 'search'
+      get 'filter/:tag_id', :action => :filter, :as => :filter
+    end
+  end
   resources :tags, :only => [:create]
   resources :options, :only => [:create]
   resources :exercises, :only => [:create]
