@@ -10,5 +10,6 @@
 
 class Tag < ActiveRecord::Base
   attr_accessible :name
-  belongs_to :quizes
+  has_and_belongs_to_many :quizzes
+
 end

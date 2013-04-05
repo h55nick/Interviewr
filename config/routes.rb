@@ -5,8 +5,10 @@ RailJumper::Application.routes.draw do
   delete '/login' => 'session#destroy'
 
   resources :people
-  resources :quiz
+  resources :quiz #delete and move to quizzes
+  resources :quizzes
   resources :tags, :only => [:create]
   resources :options, :only => [:create]
   resources :exercises, :only => [:create]
+
 end

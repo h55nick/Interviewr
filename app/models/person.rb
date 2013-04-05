@@ -13,11 +13,13 @@
 #  lat             :float
 #  long            :float
 #  customer_id     :integer
+#  is_house        :boolean          default(FALSE)
 #
 
 class Person < ActiveRecord::Base
   attr_accessible :name, :email, :address, :password, :password_confirmation, :phone, :image_file, :balance, :lat, :long, :customer_id, :is_house
   has_many :results
+  has_many :quizzes
   has_secure_password
   mount_uploader :image_file, PhotosUploaderUploader
 
