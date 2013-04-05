@@ -13,6 +13,7 @@
 #  lat             :float
 #  long            :float
 #  customer_id     :integer
+#  is_house        :boolean          default(FALSE)
 #
 
 require 'spec_helper'

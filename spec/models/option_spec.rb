@@ -2,11 +2,12 @@
 #
 # Table name: options
 #
-#  id         :integer          not null, primary key
-#  answer     :text
-#  is_correct :boolean
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  answer      :text
+#  is_correct  :boolean
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  exercise_id :integer
 #
 
 require 'spec_helper'
