@@ -1,7 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700,900,100italic,700italic,900italic);
+
 #profile_pic{
-  width: 150px;
+  width: 250px;
   height: 250px;
+  float: left;
 }
 #bio{
   height: 200px;
+}
+#stats{
+  border: 1px solid #999;
+  border-radius: 10px;
+  background-color: #999;
+  width: 500px;
+  float: left;
+
+  .tests_taken.inline{
+    padding-right: 50px;
+  }
+
+  .high_score.inline{
+    padding-right: 50px;
+  }
+
+  .mosttags.inline{
+    padding-right: 50px;
+  }
+
+  .score{
+      color: white;
+      font-family: 'Lato', sans-serif;
+      margin-bottom: 7px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+  .stat{
+    color: white;
+    font-family: 'Lato', sans-serif;
+  }
 }

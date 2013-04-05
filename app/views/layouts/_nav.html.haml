@@ -24,6 +24,6 @@
         %li
           = link_to('Dashboard', person_path(@auth), :class=>'button', )
         %li
-          =link_to(image_tag("user.svg", :size => '50x50'), login_path)
+          =link_to(image_tag("user.svg", :size => '50x50'), login_path, method:"DELETE")
           / = link_to('Logout', login_path, :class=>'button alert', method:"DELETE")
 #pencil_nav
