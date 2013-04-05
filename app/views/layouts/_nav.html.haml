@@ -1,0 +1,21 @@
+.row
+  .large-3.columns
+    .logo
+      .logo1 code
+      .logo2 quiz
+  .large-9.columns
+    %ul.right.button-group
+      %li
+        %a.button{:href => "#"} Browse Quizzes
+      %li
+        %a.button{:href => "#"} Find a Developer
+      - if @auth.nil?
+        %li= link_to('Register', new_person_path, :class=>'button',:remote=>true)
+        #login.inline
+        %li= link_to('Login',login_path,:class=> 'button ', :remote=>true)
+      - else
+        %li
+          = link_to('Dashboard', person_path(@auth), :class=>'button', )
+        %li
+          = link_to('Logout', login_path, :class=>'button alert', method:"DELETE")
+#form
