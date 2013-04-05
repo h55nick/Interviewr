@@ -2,14 +2,20 @@
   =image_tag(@person.image_file, :id=> 'profile_pic')
   #stats
     .tests_taken.inline
-      34
+      %p.score 34
+      %span.stat Tests Taken
     .high_score.inline
-      90%
+      %p.score 90%
+      %span.stat High Score
     .mosttags.inline
-      Ruby
-  %br
-  #bio.inline
-    %h1=@auth.name
+      %p.score Ruby
+      %span.stat Topic
+%br
+%br
+%br
+%br
+#bio.inline
+  %h1=@auth.name
 
 #test_table
   //=render "test_table"
@@ -20,3 +26,4 @@
 
 #graph
   graph goes here
+
