@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(:version => 20130405011226) do
 
   create_table "quizzes", :force => true do |t|
     t.string   "name"
-    t.integer  "person_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
