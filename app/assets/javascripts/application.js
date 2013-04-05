@@ -11,5 +11,6 @@
 //= require jquery.remotipart
 //= require clear_form
 //= require ajax
+//= require quiz
 //= require chart.min
 
