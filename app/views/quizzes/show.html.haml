@@ -1,0 +1,23 @@
+= @quiz.name
+
+%table
+  %th Name
+  %th Date
+  %th Last Score
+  %th Avg Score
+  %th Number of Attempts
+  - @quizzes.each do |quiz|
+    %td
+      = label_tag reservation.name
+    %td
+      = label_tag reservation.phone
+    %td
+      = label_tag reservation.est_wait
+      = hidden_field_tag('phone', reservation.phone)
+      = hidden_field_tag('first', reservation.name)
+    %td
+      .datetime{:'data-created' => reservation.created_at}
+    %td
+      = text_area_tag('body', nil, :rows => 3 )
+    %td
+      = submit_tag('Send Text')
