@@ -15,4 +15,21 @@ class Quiz < ActiveRecord::Base
   has_many :exercises
   has_and_belongs_to_many :tags
   belongs_to :person
+
+
+  def total_cost
+    costs = []
+    self.exercises.each do |exercise|
+      cost = exercise.cost
+      costs << cost
+      end
+      costs.reduce(:+).to_f
+  end
+
+  def owner
+    id = self.person_id
+    person = Person.where(:id => id).first
+    name = person.name
+  end
+
 end

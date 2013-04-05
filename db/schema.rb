@@ -34,22 +34,23 @@ ActiveRecord::Schema.define(:version => 20130405011226) do
   end
 
   create_table "people", :force => true do |t|
-    t.string  "name"
-    t.text    "address"
-    t.string  "email"
-    t.string  "password_digest"
-    t.string  "phone"
-    t.text    "image_file"
-    t.float   "balance"
-    t.float   "lat"
-    t.float   "long"
-    t.integer "customer_id"
-    t.boolean "is_house",        :default => false
+    t.string   "name"
+    t.text     "address"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "phone"
+    t.text     "image_file"
+    t.float    "balance"
+    t.float    "lat"
+    t.float    "long"
+    t.integer  "customer_id"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.boolean  "is_house",        :default => false
   end
 
   create_table "quizzes", :force => true do |t|
     t.string   "name"
-    t.integer  "person_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

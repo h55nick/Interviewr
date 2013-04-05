@@ -1,0 +1,22 @@
+
+%h1 Quiz Show Page
+
+
+%table
+  %tr
+    %th Name
+    %th Last Date
+    %th Last Score
+    %th Avg Score
+    %th Number of Attempts
+  - @quizzes.each do |q|
+    %tr
+      %td= q.name
+      %td= q.name
+      / %td- q.results.each do |r|
+      / %td= r.score
+      / %td=/{:'data-created' => }
+      / %td/ =
+      / %td/ =
+
+= @quiz.name

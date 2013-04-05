@@ -1,0 +1,10 @@
+%table
+  %tr
+    %th Name
+    %th Fee
+    %th Owner
+  - @quizzes.each do |quiz|
+    %tr
+      %td= link_to(quiz.name, quiz_path(quiz))
+      %td= number_to_currency(quiz.total_cost)
+      %td= quiz.owner

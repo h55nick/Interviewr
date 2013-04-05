@@ -4,6 +4,7 @@ RailJumper::Application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  resources :people
+
+  resources :people, :quizzes
 
 end
