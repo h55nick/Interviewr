@@ -1,0 +1,6 @@
+-if @exercise.present?
+  .question{'data-eid'=>@exercise.id}
+    =@exercise.question
+    .answers
+      - @exercise.options.each do |o|
+        .option=o.answer
