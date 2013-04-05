@@ -6,6 +6,6 @@
   - @quizzes.each do |quiz|
     %tr
       %td= link_to(quiz.name, quiz_path(quiz))
-      %td= quiz.total_cost
-      %td= quiz.person_id
+      %td= number_to_currency(quiz.total_cost)
+      %td= quiz.owner
 

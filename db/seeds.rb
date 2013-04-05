@@ -51,6 +51,10 @@ r4 = Result.create(score: 4.5)
 r5 = Result.create(score: 9.5)
 r6 = Result.create(score: 2.5)
 
+q1.exercises = [e1, e2, e3, e4, e5, e6]
+q2.exercises = [e3, e4, e5, e6]
+q3.exercises = [e7, e6]
+
 
 e2.options = [o19, o20, o21, o22]
 e3.options = [o15, o16, o17, o18]
