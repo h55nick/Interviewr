@@ -1,4 +1,21 @@
+
 = text_field_tag :search, nil, :autofocus => true
 
 #quizzes
   = render "quizzes"
+
+%table
+  %tr
+    %th Name
+    %th Fee
+    %th Difficulty
+    %th Rating
+    %th Owner
+  - @quizzes.each do |quiz|
+    %tr
+      %td= link_to(quiz.name, quiz_path(quiz))
+      %td= number_to_currency(quiz.total_cost)
+      %td= quiz.overall_difficulty
+      %td= quiz.overall_rating
+      %td= quiz.owner
+

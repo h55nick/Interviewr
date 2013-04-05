@@ -1,5 +1,5 @@
 
-%h1 Quiz Show Page
+%h1= @quiz.name
 
 
 %table
@@ -9,14 +9,12 @@
     %th Last Score
     %th Avg Score
     %th Number of Attempts
-  - @quizzes.each do |q|
-    %tr
-      %td= q.name
-      %td= q.name
-      / %td- q.results.each do |r|
-      / %td= r.score
-      / %td=/{:'data-created' => }
-      / %td/ =
-      / %td/ =
+    -@quiz.people.each do |person|
+      %tr
+        %td= person.name
+        %td= person.results.last.created_at
+        %td= person.results.last.score
+        %td= number_to_percentage(@quiz.avgscore(person), :precision => 2)
+        %td= person.results.all.count
 
-= @quiz.name
+
