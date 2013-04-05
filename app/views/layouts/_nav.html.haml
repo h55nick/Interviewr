@@ -15,13 +15,8 @@
         %li= link_to('Login',login_path,:class=> 'button ', :remote=>true)
       - else
         %li
-          = link_to('Dashboard', person_path(@auth), :class=>'button', )
+          = link_to image_tag( 'user.svg', person_path)
+          / = link_to('Dashboard', person_path(@auth), :class=>'button', )
         %li
           = link_to('Logout', login_path, :class=>'button alert', method:"DELETE")
 #form
-
-
-%a{:href => "URL"}
-  %img{:alt => "alt text", :src => "image.gif"}/
-
-%li= link_to()
