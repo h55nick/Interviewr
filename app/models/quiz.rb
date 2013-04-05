@@ -23,6 +23,13 @@ class Quiz < ActiveRecord::Base
       cost = exercise.cost
       costs << cost
       end
+      costs.reduce(:+).to_f
+  end
+
+  def owner
+    id = self.person_id
+    person = Person.where(:id => id).first
+    name = person.name
   end
 
 end
