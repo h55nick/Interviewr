@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404173301) do
+ActiveRecord::Schema.define(:version => 20130405011226) do
 
   create_table "exercises", :force => true do |t|
     t.text     "question"
@@ -22,29 +22,29 @@ ActiveRecord::Schema.define(:version => 20130404173301) do
     t.float    "cost"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "quiz_id"
   end
 
   create_table "options", :force => true do |t|
     t.text     "answer"
     t.boolean  "is_correct"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "exercise_id"
   end
 
   create_table "people", :force => true do |t|
-    t.string   "name"
-    t.text     "address"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "phone"
-    t.text     "image_file"
-    t.float    "balance"
-    t.float    "lat"
-    t.float    "long"
-    t.integer  "customer_id"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-    t.boolean  "is_house",        :default => false
+    t.string  "name"
+    t.text    "address"
+    t.string  "email"
+    t.string  "password_digest"
+    t.string  "phone"
+    t.text    "image_file"
+    t.float   "balance"
+    t.float   "lat"
+    t.float   "long"
+    t.integer "customer_id"
+    t.boolean "is_house",        :default => false
   end
 
   create_table "quizzes", :force => true do |t|
@@ -52,6 +52,11 @@ ActiveRecord::Schema.define(:version => 20130404173301) do
     t.integer  "person_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "quizzes_tags", :id => false, :force => true do |t|
+    t.integer "quiz_id"
+    t.integer "tag_id"
   end
 
   create_table "results", :force => true do |t|

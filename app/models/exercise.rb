@@ -11,6 +11,7 @@
 #  cost       :float
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  quiz_id    :integer
 #
 
 class Exercise < ActiveRecord::Base

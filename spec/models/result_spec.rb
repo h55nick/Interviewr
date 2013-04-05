@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: results
+#
+#  id         :integer          not null, primary key
+#  person_id  :integer
+#  quiz_id    :integer
+#  score      :float
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'spec_helper'
 
 describe Result do
