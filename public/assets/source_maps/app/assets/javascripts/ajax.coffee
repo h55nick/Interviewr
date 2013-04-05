@@ -1,4 +1,6 @@
 window.aj =
+  ready: ->
+    $('body').on('keyup', '#search', aj.filter_quizzes)
   create_quiz:(e)->
     name = $('#name').val();
     exercises = []
@@ -12,6 +14,14 @@ window.aj =
       method: 'POST'
       data: data
       url: "/quizzes"
+    $.ajax(settings)
+  filter_quizzes: (e) ->
+    query = $('#search').val()
+    console.log(query)
+    settings =
+      dataType: 'script'
+      type: 'get'
+      url: "/quizzes/search?query=#{query}"
     $.ajax(settings)
   add_tags:(e)->
     e.preventDefault
@@ -49,3 +59,5 @@ window.aj =
       data: data
     $.ajax(settings)
     #arrayVariable = $.makeArray$("note").ma $(this).attr("noteId");
+
+$(document).ready(aj.ready)
