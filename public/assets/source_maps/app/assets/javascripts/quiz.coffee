@@ -5,6 +5,7 @@ window.quiz =
         $('#questionform').addClass('hide')
         $('#addquestion').click(quiz.show_questionform)
         $('#createquestion').click(aj.add_question)
+        $('#difficulty').attr('data-difficulty',5)
         ###Toggles###
         $('#questions').on('click', '.question',quiz.show_answers)
         $('#private').click(quiz.toggle_private)

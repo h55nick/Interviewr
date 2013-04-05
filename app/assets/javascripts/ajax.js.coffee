@@ -11,7 +11,7 @@ window.aj =
       dataType: 'script'
       method: 'POST'
       data: data
-      url: "/quiz"
+      url: "/quizzes"
     $.ajax(settings)
   add_tags:(e)->
     e.preventDefault
