@@ -43,5 +43,5 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors' #May cause issues in rspec, separated from the
+  # gem 'better_errors' #May cause issues in rspec, separated from the
 end
