@@ -22,7 +22,15 @@ class QuizzesController < ApplicationController
   def test
     @quiz = Quiz.find(params[:id])
   end
-
+  def quizresults
+    binding.pry
+    if @auth.present?
+      @result = Result.create(quiz_id:params[:qid],score:params[:score])
+      @auth.results << @result
+    else
+      @result = false
+    end
+  end
   def filter
     tag = Tag.find(params[:tag_id])
     @quizzes = tag.quizzes
