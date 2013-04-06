@@ -42,4 +42,5 @@ window.quiz =
         $(this).toggleClass('correct')
 
 
+
 $(document).ready(quiz.document_ready)
