@@ -8,6 +8,18 @@ class QuizzesController < ApplicationController
   end
   def new
   end
+  def graph
+    r = Result.all
+    names = r.map{|r| r.person.name}.uniq
+    # scores = r.map{|r| r.score}
+    # dates = r.map{|r| r.created_at}
+
+    respond_to do |f|
+      f.html #will error until an HTML template is made
+      f.js {render :json => r}
+    end
+  end
+
   def create
     @quiz = Quiz.create(name:params[:name]) if params[:name].present?
     if @quiz.present? && params[:exercises].present?
@@ -68,3 +80,4 @@ class QuizzesController < ApplicationController
     render :filter
   end
 end
+

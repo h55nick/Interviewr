@@ -6,6 +6,7 @@ RailJumper::Application.routes.draw do
 
   resources :people
 
+
   post '/quizresults' => 'quizzes#quizresults'
   resources :quizzes do
     member do
@@ -16,6 +17,7 @@ RailJumper::Application.routes.draw do
     collection do
       get 'search'
       get 'filter/:tag_id', :action => :filter, :as => :filter
+      get 'graph'
     end
   end
 
