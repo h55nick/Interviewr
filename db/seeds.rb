@@ -76,6 +76,7 @@ q1.tags = [t1, t2, t3, t4, t5, t6]
 q2.tags = [t7, t8, t10]
 q3.tags = [t8, t9]
 
+e1.options = [o11, o12, o13, o14]
 e2.options = [o19, o20, o21, o22]
 e3.options = [o15, o16, o17, o18]
 e4.options = [o9, o10]
