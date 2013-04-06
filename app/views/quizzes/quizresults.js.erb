@@ -1,0 +1,5 @@
+<% if @result != false %>
+$("#scoreboard").empty().append("You scored: <%= @result.score * 100 %>%<br/><div id='seecorrect'>See Correct Answers</div>");
+$('#stest').remove();
+<%end%>
+
