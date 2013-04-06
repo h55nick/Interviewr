@@ -13,5 +13,6 @@
 //= require ajax
 //= require quiz
 //= require chart.min
+//= require stripe
 //= require map
 

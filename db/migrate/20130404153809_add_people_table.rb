@@ -10,7 +10,7 @@ class AddPeopleTable < ActiveRecord::Migration
       t.float :balance
       t.float :lat
       t.float :long
-      t.integer :customer_id
+      t.string :customer_id
       t.timestamps
     end
   end
