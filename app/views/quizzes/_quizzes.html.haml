@@ -7,10 +7,17 @@
     %th.quiz_data Rating
     %th.quiz_data Owner
   - @quizzes.each do |quiz|
+
     %tr.form_underline
+      %td
+        - if @auth.customer_id.present?
+          = render :partial => 'quizzes/customer', :locals => {:quiz => quiz}
+        - else
+          = render :partial => 'quizzes/anonymous', :locals => {:quiz => quiz}
       %td.quiz_data= (image_tag 'ruby-icon.jpg', :size => '50x50')
       %td.quiz_data= link_to(quiz.name, quiz_path(quiz))
       %td.quiz_data= number_to_currency(quiz.total_cost)
       %td.quiz_data= quiz.overall_difficulty
       %td.quiz_data= quiz.overall_rating
       %td.quiz_data= quiz.owner
+

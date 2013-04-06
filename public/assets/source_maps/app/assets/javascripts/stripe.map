@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "",
+  "sourceRoot": "",
+  "sources": [
+    "/assets/source_maps/app/assets/javascripts/stripe.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;CAAA,CAAA,CACE,GADI;CACJ,CAAgB,CAAA,CAAhB,KAAgB,KAAhB;CACE,CAAA,IAAA,CAAA,MAAA,EAAA,CAAA;CADF,IAAgB;CAAhB,CAEiB,CAAA,CAAjB,CAAiB,IAAC,MAAlB;CACE,KAAA,QAAA;CACA,CAAiC,CAAqC,CAAtE,CAA2E,CAA3E,EAAA,KAAA,yBAAiC;CAJnC,IAEiB;CAHnB,GAAA;;CAAA,CAOA,GAAA,CAAwB,EAAxB,MAAA;CAPA"
+}

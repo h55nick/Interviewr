@@ -3,7 +3,7 @@
 //= require foundation/foundation.min
 //= require foundation/vendor/custom.modernizr
 //= require underscore.min
-//#= require sugar.min
+//= require sugar.min
 //= require moment.min
 //= require d3.v3.min
 //= require morris.min
@@ -13,5 +13,6 @@
 //= require ajax
 //= require quiz
 //= require chart.min
+//= require stripe
 //= require map
-
+//= require test

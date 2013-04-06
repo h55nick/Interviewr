@@ -17,15 +17,36 @@ class QuizzesController < ApplicationController
       end
     end
   end
-
-
-  def test
-    @quiz = Quiz.find(params[:id])
+  def purchase
+    quiz = Quiz.find(params[:id])
+  begin
+    if @auth.customer_id.nil?
+      customer = Stripe::Customer.create(email: @auth.email, card: params[:token])
+      @auth.customer_id = customer.id
+      @auth.save
+    end
+    Stripe::Charge.create(customer: @auth.customer_id, amount: (quiz.total_cost * 100).to_i, description: quiz.name, currency: 'usd')
+  rescue Stripe::CardError => @error
   end
-
+  end
+  def test
+    if @auth.present?
+    @quiz = Quiz.find(params[:id])
+  else
+      redirect_to(root_path)
+    end
+  end
+  def quizresults
+    if @auth.present?
+      @result = Result.create(quiz_id:params[:qid],score:params[:score])
+      @auth.results << @result
+    else
+      @result = false
+    end
+  end
   def filter
     tag = Tag.find(params[:tag_id])
-    @quizzes = tag.quizzes
+    @quizzes = tag.quizzesg
   end
   def search
     query = params[:query]
