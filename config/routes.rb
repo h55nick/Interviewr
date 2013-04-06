@@ -6,11 +6,22 @@ RailJumper::Application.routes.draw do
 
   resources :people
 
+
+  post '/quizresults' => 'quizzes#quizresults'
   resources :quizzes do
+    member do
+      get :test
+      post 'purchase'
+    end
+
     collection do
+      get 'search'
+      get 'filter/:tag_id', :action => :filter, :as => :filter
       get 'graph'
     end
   end
+
+
   resources :tags, :only => [:create]
   resources :options, :only => [:create]
   resources :exercises, :only => [:create]

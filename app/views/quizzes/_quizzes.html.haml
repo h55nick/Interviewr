@@ -1,0 +1,19 @@
+%table
+  %tr
+    %th Name
+    %th Fee
+    %th Difficulty
+    %th Rating
+    %th Owner
+  - @quizzes.each do |quiz|
+    %tr
+      %td
+        - if @auth.customer_id.present?
+          = render :partial => 'quizzes/customer', :locals => {:quiz => quiz}
+        - else
+          = render :partial => 'quizzes/anonymous', :locals => {:quiz => quiz}
+      %td= link_to(quiz.name, quiz_path(quiz))
+      %td= number_to_currency(quiz.total_cost)
+      %td= quiz.overall_difficulty
+      %td= quiz.overall_rating
+      %td= quiz.owner

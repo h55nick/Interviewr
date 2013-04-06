@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'bcrypt-ruby'
 gem 'geocoder'
+gem 'stripe'
 
 gem 'carrierwave'
 gem 'rmagick'

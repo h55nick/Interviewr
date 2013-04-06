@@ -21,11 +21,35 @@
 require 'spec_helper'
 
 describe Person do
+  let(:quiz) {Quiz.create(name: 'Ruby Basics')}
+  let(:person) {Person.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')}
+  let(:result) {Result.create(score: 99)}
+
+  describe '.new' do
+    it 'creates an instance of Person' do
+      person = Person.new
+      expect(person).to be_an_instance_of(Person)
+    end
+  end
+
   describe '.create' do
     it 'has an id' do
-      person = Person.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')
       expect(person.id).to_not be nil
       #expect(person.is_house).to eq false
+    end
+  end
+
+  describe '#quizzes' do
+    it 'has quizzes' do
+      person.quizzes << quiz
+      expect(person.quizzes.first).to be_an_instance_of(Quiz)
+    end
+  end
+
+  describe '#quizzes' do
+    it 'has results' do
+      person.results << result
+      expect(person.results.first).to be_an_instance_of(Result)
     end
   end
 end
