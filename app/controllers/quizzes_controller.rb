@@ -17,8 +17,18 @@ class QuizzesController < ApplicationController
       end
     end
   end
-
-
+  def purchase
+    quiz = Quiz.find(params[:id])
+  begin
+    if @auth.customer_id.nil?
+      customer = Stripe::Customer.create(email: @auth.email, card: params[:token])
+      @auth.customer_id = customer.id
+      @auth.save
+    end
+    Stripe::Charge.create(customer: @auth.customer_id, amount: (quiz.total_cost * 100).to_i, description: quiz.name, currency: 'usd')
+  rescue Stripe::CardError => @error
+  end
+  end
   def test
     if @auth.present?
     @quiz = Quiz.find(params[:id])
@@ -36,7 +46,7 @@ class QuizzesController < ApplicationController
   end
   def filter
     tag = Tag.find(params[:tag_id])
-    @quizzes = tag.quizzes
+    @quizzes = tag.quizzesg
   end
   def search
     query = params[:query]
