@@ -10,7 +10,8 @@
 
 require 'spec_helper'
 describe Tag do
-#  let(:tag) {Tag.create(name: 'rails')}
+  let(:tag) {Tag.create(name: 'rails')}
+  let(:quiz) {Quiz.create(name: 'Ruby Basics')}
 
   describe '.new' do
     it 'creates an instance of a tag' do
@@ -27,19 +28,11 @@ describe Tag do
     end
   end
 
-#describe '#plane' do
- #   it 'has a plane' do
-  #     = FactoryGirl.create(:plane)
-   #   flight.plane = plane
-    #  expect(flight.plane).to eq plane
-   # end
-  #end
+  describe '#quizzes' do
+    it 'list quizzes that have a specific tag' do
+      tag.quizzes << quiz
+      expect(tag.quizzes.first).to eq quiz
+    end
+  end
 
-  #describe '#seats' do
-   # it 'has seats' do
-    #  seat = FactoryGirl.create(:seat)
-     # flight.seats << seat
-      #expect(flight.seats.count).to eq 1
-    #end
-  #end
 end

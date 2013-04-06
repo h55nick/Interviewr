@@ -7,6 +7,9 @@ RailJumper::Application.routes.draw do
   resources :people
 
   resources :quizzes do
+    member do
+      get :test
+    end
     collection do
       get 'search'
       get 'filter/:tag_id', :action => :filter, :as => :filter

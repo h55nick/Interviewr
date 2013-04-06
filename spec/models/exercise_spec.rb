@@ -18,6 +18,9 @@ require 'spec_helper'
 
 describe Exercise do
   let(:exercise) {Exercise.create(question: 'What is Ruby?', difficulty: 5, cost: 3.5, is_public: true, code: 5)}
+  let(:quiz) {Quiz.create(name: 'Ruby Basics')}
+  let(:tag) {Tag.create(name: 'rails')}
+
 
   describe '.new' do
     it 'creates an instance of Exercise' do
@@ -40,4 +43,22 @@ describe Exercise do
       expect(exercise.options.first).to be_an_instance_of(Option)
     end
   end
+
+  describe '#tags' do
+    it 'has tags' do
+      exercise = Exercise.new
+      tag = Tag.new
+      exercise.tags << tag
+      expect(exercise.tags.first).to be_an_instance_of(Tag)
+    end
+  end
+
+  describe '#quiz' do
+    it 'belongs to a quiz' do
+      quiz.exercises << exercise
+      expect(exercise.quiz).to eq quiz
+    end
+  end
+
+
 end

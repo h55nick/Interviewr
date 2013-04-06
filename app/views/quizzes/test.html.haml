@@ -1,0 +1,7 @@
+-@quiz.exercises.each do |question|
+  .question
+    =question.question
+    %ol
+      -question.options.shuffle.each do |option|
+        %li.option{'data-correct'=>option.is_correct.to_s}
+          =option.answer

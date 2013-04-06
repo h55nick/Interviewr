@@ -11,7 +11,11 @@ class SessionController < ApplicationController
       session[:person_id] = nil
     end
     authenticate
-    redirect_to(person_path(@auth))
+    if @auth.present?
+      redirect_to(person_path(@auth))
+    else
+      redirect_to(root_path)
+    end
   end
 
   def destroy

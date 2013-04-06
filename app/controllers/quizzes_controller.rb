@@ -17,6 +17,12 @@ class QuizzesController < ApplicationController
       end
     end
   end
+
+
+  def test
+    @quiz = Quiz.find(params[:id])
+  end
+
   def filter
     tag = Tag.find(params[:tag_id])
     @quizzes = tag.quizzes
