@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700,900,100italic,700italic,900italic);
+
 .bton{
   border: 1px blue solid;
   text-align: center;
@@ -16,4 +18,38 @@ div.priv{
 
 #addquestion{
 
+}
+
+#quizzes{
+  width: 500px;
+}
+.quiz_list{
+  background-color: #999;
+  font-size: 24px;
+}
+.quiz_data{
+  font-size: 24px;
+  color: #999;
+  background-color: #3a3a3a;
+}
+.form_underline{
+  border-bottom: #999;
+}
+table{
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  background-color: #3a3a3a;
+  border: #3a3a3a;
+  padding-top: 100px;
+  width: 750px;
+}
+#search-input{
+  width: 500px;
+  float: right;
+}
+.search_field{
+  background-image:url('search.svg');
+  background-position: 2%;
+  background-repeat: no-repeat;
+  background-size: 15px;
 }

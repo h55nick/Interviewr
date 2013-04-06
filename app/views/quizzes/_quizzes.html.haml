@@ -1,14 +1,16 @@
 %table
-  %tr
-    %th Name
-    %th Fee
-    %th Difficulty
-    %th Rating
-    %th Owner
+  %tr.form_underline
+    %th
+    %th.quiz_data Name
+    %th.quiz_data Fee
+    %th.quiz_data Difficulty
+    %th.quiz_data Rating
+    %th.quiz_data Owner
   - @quizzes.each do |quiz|
-    %tr
-      %td= link_to(quiz.name, quiz_path(quiz))
-      %td= number_to_currency(quiz.total_cost)
-      %td= quiz.overall_difficulty
-      %td= quiz.overall_rating
-      %td= quiz.owner
+    %tr.form_underline
+      %td.quiz_data= (image_tag 'ruby-icon.jpg', :size => '50x50')
+      %td.quiz_data= link_to(quiz.name, quiz_path(quiz))
+      %td.quiz_data= number_to_currency(quiz.total_cost)
+      %td.quiz_data= quiz.overall_difficulty
+      %td.quiz_data= quiz.overall_rating
+      %td.quiz_data= quiz.owner

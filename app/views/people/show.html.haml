@@ -10,13 +10,18 @@
     .mosttags.inline
       %p.score Ruby
       %span.stat Topic
+    .language_icon1.inline
+      =image_tag 'ruby-icon.jpg', :size => '50x50'
+    .language_icon2.inline
+      =image_tag 'python-icon.png', :size => '50x50'
 %br
 %br
 %br
 %br
 #bio.inline
-  %h1=@auth.name
-
+  %h1.person_name=@auth.name
+  %p.bio_info Timbuktu, Mali
+  %p.bio_info I'm a former computer science professor at the University of Timbuktu and now I'm learning Ruby.
 #test_table
   //=render "test_table"
   Table stuff here

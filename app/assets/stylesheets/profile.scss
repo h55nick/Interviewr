@@ -8,15 +8,24 @@
 #bio{
   height: 200px;
   margin-left: 50px;
+  margin-bottom: 0;
+}
+.person_name{
+  margin-bottom: 0px
+}
+.bio_info{
+  color: #999;
+  margin-bottom: 0;
 }
 #stats{
   border: 1px solid #999;
   border-radius: 10px;
   background-color: #999;
-  width: 400px;
+  // width: 400px;
   float: left;
   margin-left: 50px;
   padding-left: 25px;
+  width: 660px;
 
   .tests_taken.inline{
     padding-right: 50px;
@@ -30,6 +39,14 @@
     padding-right: 50px;
     text-align: center;
   }
+
+  .language_icon1.inline{
+    padding-right: 50px;
+  }
+
+  .language_icon2.inline{
+      padding-right: 50px;
+    }
 
   .score{
       color: white;
