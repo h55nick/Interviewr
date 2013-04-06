@@ -2,6 +2,7 @@ window.test =
     docready:->
       $('body').on('click','.option',test.aselect)
       $('body').on('click','#stest',test.calc_score)
+      $('body').on('click',"#seecorrect",test.show_correct)
     aselect:->
       current = $(this).attr('data-selected') == 'true'
       $(this).attr('data-selected', !current)
@@ -21,6 +22,17 @@ window.test =
           url: '/quizresults'
           data:data
         $.ajax(settings)
+    show_correct:->
+      console.log("Showing Correct")
+      $('.option')[0..-2].each (i,option) =>
+          console.log($(option).attr("data-correct")=='true')
+          if($(option).attr("data-correct") == "true")
+            $(option).addClass('correct')
+          else
+            $(option).addClass('incorrect')
+
+
+
 
 
 

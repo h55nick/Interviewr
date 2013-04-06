@@ -20,10 +20,13 @@ class QuizzesController < ApplicationController
 
 
   def test
+    if @auth.present?
     @quiz = Quiz.find(params[:id])
+  else
+      redirect_to(root_path)
+    end
   end
   def quizresults
-    binding.pry
     if @auth.present?
       @result = Result.create(quiz_id:params[:qid],score:params[:score])
       @auth.results << @result
