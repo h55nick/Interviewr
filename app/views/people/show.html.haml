@@ -20,8 +20,12 @@
 #test_table
   //=render "test_table"
   Table stuff here
-#map
-  Map goes here
+
+#map_canvas
+  %script
+    map.display_map(0, 0, 1)
+    = "map.add_marker(#{@person.lat}, #{@person.long}, '#{@person.name}');"
+
 =link_to('Add Question', "#")
 
 #graph

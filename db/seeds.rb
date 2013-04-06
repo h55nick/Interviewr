@@ -5,9 +5,9 @@ Quiz.delete_all
 Result.delete_all
 Tag.delete_all
 
-p1 = Person.create(name: 'Bob', address: '10 East 21st NY', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a', phone: '47282847', image_file: 'jess.JPG')
-p2 = Person.create(name: 'Jess', address: '50 8th Avenue, Manhattan, NY', email: 'jess@gmail.com', password: 'a', password_confirmation: 'a', phone: '99683727', image_file: 'jess.JPG')
-p3 = Person.create(name: 'Jan', address: '106 Ridge Street, Manhattan, NY', email: 'jan@gmail.com', password: 'a', password_confirmation: 'a', phone: '96847256', image_file: 'jess.JPG')
+p1 = Person.create(name: 'Bob', address: 'Sydney, Australia', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a', phone: '47282847', image_file: 'jess.JPG')
+p2 = Person.create(name: 'Jess', address: 'New York City, NY, USA', email: 'jess@gmail.com', password: 'a', password_confirmation: 'a', phone: '99683727', image_file: 'jess.JPG')
+p3 = Person.create(name: 'Jan', address: 'London, England', email: 'jan@gmail.com', password: 'a', password_confirmation: 'a', phone: '96847256', image_file: 'jess.JPG')
 
 e1 = Exercise.create(question: 'What is the difference between a Symbol and String?', difficulty: 5, rating: 4, is_public: 'true', cost: 2.50)
 e2 = Exercise.create(question: 'What is a Range?', difficulty: 5, rating: 4, is_public: 'true', cost: 1.50)
@@ -76,13 +76,12 @@ q1.tags = [t1, t2, t3, t4, t5, t6]
 q2.tags = [t7, t8, t10]
 q3.tags = [t8, t9]
 
-
-e2.options = [o19, o20, o21, o22]
-e3.options = [o15, o16, o17, o18]
-e4.options = [o9, o10]
-e5.options = [o5, o6, o7, o8]
-e6.options = [o1, o2, o3, o4]
-e7.options = [o23, o24, o25, o26]
+# e2.options = [o19, o20, o21, o22]
+# e3.options = [o15, o16, o17, o18]
+# e4.options = [o9, o10]
+# e5.options = [o5, o6, o7, o8]
+# e6.options = [o1, o2, o3, o4]
+# e7.options = [o23, o24, o25, o26]
 
 p1.results = [r1, r2]
 p2.results = [r3, r4]
