@@ -63,9 +63,11 @@ p{
 }
 .right.button-group {
   width: 400px;
+  float: right;
 
   li{
-  padding-right: 25px;
+  padding-right: 35px;
+  margin-bottom: 0;
   color: #3a3a3a;
     &:hover {
       color: #ff6666;
@@ -74,6 +76,7 @@ p{
 
   p {
   margin-bottom: 0;
+  margin-top: 0;
   font-size: 18px;
   font-family: 'Lato', sans-serif;
   text-align: center;
