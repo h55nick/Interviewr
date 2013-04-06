@@ -10,6 +10,10 @@ RailJumper::Application.routes.draw do
     member do
       get :test
     end
+    collection do
+      get 'search'
+      get 'filter/:tag_id', :action => :filter, :as => :filter
+    end
   end
   resources :tags, :only => [:create]
   resources :options, :only => [:create]

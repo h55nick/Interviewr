@@ -18,9 +18,32 @@ class QuizzesController < ApplicationController
     end
   end
 
+
   def test
     @quiz = Quiz.find(params[:id])
   end
 
+  def filter
+    tag = Tag.find(params[:tag_id])
+    @quizzes = tag.quizzes
+  end
+  def search
+    query = params[:query]
+    @quizzes = Quiz.where("name @@ :q", :q => query)
 
+    tags = Tag.where("name @@ :q", :q => query)
+    @quizzes += tags.map(&:quizzes).flatten
+
+    options = Option.where("answer @@ :q", :q => query)
+    @quizzes += options.map(&:exercise).compact.map(&:quiz).flatten
+
+     exercises = Exercise.where("question @@ :q", :q => query)
+    @quizzes += exercises.map(&:quiz).flatten
+
+    people = Person.where("name @@ :q", :q => query)
+    @quizzes += people.map(&:quizzes).flatten
+    @quizzes.uniq!
+
+    render :filter
+  end
 end

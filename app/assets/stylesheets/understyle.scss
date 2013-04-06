@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,700,900,100italic,700italic,900italic);
 
+/****MAIN****/
+
 body{
-background-color: #fff;
-/*#3a3a3a;*/
+background-color: #3a3a3a;
 }
 .tcenter{
   text-align: center;
@@ -22,7 +23,7 @@ h1{
   border: 3px solid #456;
   background-color: #999;
   height: 700px;
-  margin-top: 250px;
+  margin-top: 30px;
   font-family: 'Lato', sans-serif;
   font-size: 24px;
   font-weight: 100
@@ -31,10 +32,10 @@ p{
   color: #456
 }
 .new_quizzes{
-  border: 3px solid #456;
+  border: 3px solid #999;
   background-color: #999;
   height: 700px;
-  margin-top: 250px;
+  margin-top: 30px;
 }
 .new_quizzes_text{
   font-family: 'Lato', sans-serif;
@@ -56,4 +57,63 @@ p{
   color: #999;
   font-size: 48px;
   float: left;
+}
+.footer{
+  color: #999;
+}
+.right.button-group {
+  width: 400px;
+
+  li{
+  padding-right: 25px;
+  color: #3a3a3a;
+    &:hover {
+      color: #ff6666;
+    }
+  }
+
+  p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: inherit;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+
+  }
+}
+/****FORMS****/
+
+#form{
+  width: 300px;
+  float: right;
+}
+
+.form_label{
+  color: #999;
+}
+
+.login_button{
+  background-color: #ff6666;
+  color: #3a3a3a;
+  font-family: 'Lato', sans-serif;
+}
+.cancel_login_button{
+  background-color: #999;
+  color: #3a3a3a;
+  font-family: 'Lato', sans-serif;
+}
+.profile_pic{
+  float: left;
+  padding-bottom: 15px;
+}
+.form_field{
+  background-color: #999;
+}
+#person_image_file{
+  color: #999;
 }

@@ -1,17 +1,10 @@
 = form_for @person, :html => {:multipart => true}, :remote => true do |f|
-  = f.label :name
-  = f.text_field :name
-  = f.label :email
-  = f.text_field :email
-  = f.label 'Profile Picture'
-  = f.file_field :image_file
-  = f.label :address
-  = f.text_field :address
-  = f.label :phone
-  = f.text_field :phone
-  = f.label :password
-  = f.password_field :password
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
-  = link_to('Cancel', "#", :'data-clear-form' => true, :class => 'button radius tiny alert')
-  = f.submit nil, :class => 'button radius tiny success'
+  = f.text_field :name, :placeholder => 'Name'
+  = f.text_field :email, :placeholder => 'Email'
+  = f.text_field :phone, :placeholder => 'Phone (555)555-5555', :class => 'form_field'
+  = f.text_field :address, :placeholder => 'Address'
+  = f.password_field :password, :placeholder => 'Password'
+  = f.password_field :password_confirmation, :placeholder => 'Confirm Password'
+  = f.file_field :image_file, :class=>'profile_pic'
+  = link_to('Cancel', "#", :'data-clear-form' => true, :class => 'button radius tiny', :class => 'cancel_login_button')
+  = f.submit nil, :class => 'button radius tiny', :class => 'login_button'

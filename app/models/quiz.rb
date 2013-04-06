@@ -31,5 +31,37 @@ class Quiz < ActiveRecord::Base
     person = Person.where(:id => id).first
     name = person.name
   end
+  def people
+    self.results.map{|r| r.person}.uniq
+  end
+
+  def avgscore(person)
+    r = self.results.where(:person_id => person)
+    totalpos = r.count*10
+    tscore = r.map {|x| x.score}.inject(&:+)
+    (tscore/totalpos) * 100
+  end
+
+  def overall_difficulty
+    diffs = []
+    self.exercises.each do |exercise|
+      diff = exercise.difficulty
+      diffs << diff
+      end
+      total = diffs.reduce(:+).to_f
+      average = total/(self.exercises.count).to_i
+      average = (average * 100).round.to_f / 100
+  end
+
+  def overall_rating
+    ratings = []
+    self.exercises.each do |exercise|
+      rating = exercise.rating
+      ratings << rating
+      end
+      total = ratings.reduce(:+).to_f
+      average = total/(self.exercises.count).to_i
+      average = (average * 100).round.to_f / 100
+  end
 
 end

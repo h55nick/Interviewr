@@ -13,4 +13,5 @@
 //= require ajax
 //= require quiz
 //= require chart.min
+//= require map
 
