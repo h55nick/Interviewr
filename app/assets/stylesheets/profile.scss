@@ -19,28 +19,33 @@
 .bio_info{
   color: #999;
   margin-bottom: 0;
+  font-family: 'Lato', sans-serif;
 }
 #stats{
-  border: 1px solid #999;
+  border: 1px solid #2a2a2a;
   border-radius: 10px;
-  background-color: #999;
+  background-color: #2a2a2a;
   float: left;
   margin-left: 50px;
   padding-left: 25px;
   width: 660px;
+  margin-top: 0;
   // height: 100px;
 
   .tests_taken.inline{
     padding-right: 50px;
+    margin-bottom: 25px;
   }
 
   .high_score.inline{
     padding-right: 50px;
+    margin-bottom: 25px;
   }
 
   .mosttags.inline{
     padding-right: 50px;
     text-align: center;
+    margin-bottom: 25px;
   }
 
   .language_icon1.inline{
@@ -52,7 +57,7 @@
     }
 
   .score{
-      color: white;
+      color: #999;
       font-family: 'Lato', sans-serif;
       margin-bottom: 0;
       padding-bottom: 10px;
@@ -62,7 +67,7 @@
     }
 
   .stat{
-    color: white;
+    color: #999;
     font-family: 'Lato', sans-serif;
   }
 }
