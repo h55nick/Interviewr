@@ -27,10 +27,15 @@ class QuizzesController < ApplicationController
 
     tags = Tag.where("name @@ :q", :q => query)
     @quizzes += tags.map(&:quizzes).flatten
-    @quizzes.uniq!
 
-    options = Answer.where("name @@ :q", :q => query)
-    @quizzes += answers.map(&:quizzes).flatten
+    options = Option.where("answer @@ :q", :q => query)
+    @quizzes += options.map(&:exercise).compact.map(&:quiz).flatten
+
+     exercises = Exercise.where("question @@ :q", :q => query)
+    @quizzes += exercises.map(&:quiz).flatten
+
+    people = Person.where("name @@ :q", :q => query)
+    @quizzes += people.map(&:quizzes).flatten
     @quizzes.uniq!
 
     render :filter

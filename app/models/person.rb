@@ -25,7 +25,8 @@ class Person < ActiveRecord::Base
   has_secure_password
   mount_uploader :image_file, PhotosUploaderUploader
 
-  after_save :geocode
+  before_save :geocode
+  private
   def geocode
     result = Geocoder.search(self.address).first
     if result.present?
