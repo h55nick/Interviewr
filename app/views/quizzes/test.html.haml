@@ -1,3 +1,5 @@
+%h1= @quiz.name
+
 -@quiz.exercises.each do |question|
   .question
     =question.question
@@ -5,3 +7,13 @@
       -question.options.shuffle.each do |option|
         %li.option{'data-correct'=>option.is_correct.to_s}
           =option.answer
+
+/ #quiz
+/   - @quiz.exercises.each do |exercise|
+/     %h6= exercise.question
+/     - exercise.options.shuffle.each do |option|
+/       = check_box_tag option.id
+/       = option.answer
+/       %p.option{'data-correct' => option.is_correct.to_s}
+/       = "#{binding.pry}"
+/   = link_to('Answer Quiz', '#', :class => 'success radius button', :method => 'test')
