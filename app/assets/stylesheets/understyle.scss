@@ -16,6 +16,15 @@ h1{
   font-family: 'Lato', sans-serif;
   font-weight: 300px;
 }
+
+#new{
+  float: left;
+  color: #ff6666;
+}
+
+#quizzes{
+  float: left;
+}
 .button{
   background-color: #999;
 }
@@ -44,7 +53,7 @@ p{
 }
 .logo{
   background-color: #999;
-  border: 1px solid #999;
+  margin-top: 15px;
 }
 .logo1{
   font-family: 'Lato', sans-serif;
@@ -62,8 +71,9 @@ p{
   color: #999;
 }
 .right.button-group {
-  width: 400px;
+  width: 530px;
   float: right;
+  margin-top: 15px;
 
   li{
   padding-right: 35px;
@@ -72,6 +82,10 @@ p{
     &:hover {
       color: #ff6666;
     }
+  #register_button{
+    margin-left: 10px;
+  }
+
   }
 
   p {

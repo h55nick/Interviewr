@@ -14,10 +14,10 @@
         %p Talent
       - if @auth.nil?
         %li
-          =link_to(image_tag("new_person.svg", :size => '50x50'), new_person_path, :remote=>true)
+          =link_to(image_tag("new_person.svg", :size => '50x50'), new_person_path, :id => 'register_button', :remote=>true)
           %p Register
         #login.inline
-        %li
+        %li#login_button
           =link_to(image_tag("login.svg", :size => '50x50'), login_path, :remote=>true)
           %p Login
       - else
