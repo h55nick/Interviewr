@@ -15,13 +15,13 @@ window.graph =
     new Morris.Line({
       element: $('#graph')
       data: results,
-      xkey: "created_at"
+      xkey: "date"
       ykeys: ["score"]
       # labels: [@quiz.person_id]
       labels: ['label']
       hoverCallback: (index, options) ->
         result = options.data[index]
-        return "#{result.person_id}: #{result.score}"
+        return "#{result.name}: #{result.score}"
       ymin: "auto"
       ymax: "auto"
     });
