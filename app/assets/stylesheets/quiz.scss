@@ -62,12 +62,13 @@ table{
 }
 .stripe-button{
   background-color: #2a2a2a;
+  margin: 0;
 }
 
 // *** TABLE TRIAL ***
 
 table.pricing-table{
-  width: 300px;
+  width: 500px;
   float: left;
   display: inline;
   padding-top: 0;
@@ -75,4 +76,12 @@ table.pricing-table{
 
 .quiz-name{
   font-size: 48px;
+  width: 400px;
+}
+
+.price{
+  float: left;
+}
+.quiz-info{
+  float: left;
 }
