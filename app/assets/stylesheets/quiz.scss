@@ -29,6 +29,7 @@ div.priv{
   color: #999;
   background-color: #2a2a2a;
   border-bottom: 1px solid #999;
+  text-align: center;
 }
 .form_underline{
   border-bottom: #999;
@@ -78,6 +79,7 @@ table.pricing-table{
 .quiz-name{
   font-size: 48px;
   width: 400px;
+  background-color: #eeeeee;
 }
 
 .price{
@@ -85,4 +87,26 @@ table.pricing-table{
 }
 .quiz-info{
   float: left;
+  background-color: white;
+}
+
+table.analytics{
+  border: 1px solid #3a3a3a;
+  margin-left: 130px;
+}
+h1.analytics{
+ font-family: 'Lato', sans-serif;
+ font-weight: 300;
+ text-align: center;
+ margin-bottom: 0;
+}
+.analytics-sub{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #eeeeee;
+  margin-top: 0;
+}
+.price_row{
+  background-color: white;
 }
