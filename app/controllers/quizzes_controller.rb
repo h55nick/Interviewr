@@ -12,7 +12,6 @@ class QuizzesController < ApplicationController
     quiz_id = params[:id]
     @quiz = Quiz.where(:id => quiz_id).first
     results = @quiz.results.map{|result| {name: result.person.name, score: result.score, date: result.created_at} }
-
     respond_to do |f|
       f.html #will error until an HTML template is made
       f.js {render :json => results}

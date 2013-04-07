@@ -1,13 +1,23 @@
 window.graph =
   document_ready:->
-      graph.get_chart();
-      # graph.display_chart()
+      # graph.get_chart_all();
+      graph.get_specific_chart();
+      graph.display_chart()
 
-  get_chart:->
+  get_chart_all:->
     settings =
       dataType: 'json'
       type: "get"
-      url: "/quizzes/graph/"
+      url: "/quizzes/graph_all/"
+    $.ajax(settings).done(graph.display_chart)
+    return false
+
+  get_specific_chart: (i)->
+    id = parseInt(i)
+    settings =
+      dataType: 'json'
+      type: "get"
+      url: "/quizzes/#{id}/graph"
     $.ajax(settings).done(graph.display_chart)
     return false
 
