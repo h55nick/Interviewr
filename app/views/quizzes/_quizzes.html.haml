@@ -55,7 +55,6 @@
 /       %tr
 /         %td Known locally as "SoMa", this neighborhood was home to the dot.com boom and boasts.
 
-%br
 - @quizzes.each do |quiz|
   %ul.pricing-table
     %li.title.quiz-name
@@ -64,13 +63,13 @@
       = number_to_currency(quiz.total_cost)
     / %li.quiz-info
     /   %h3 Yay placeholder!
-    %li.quiz-info
+    %li.bullet-item.quiz-info
       = image_tag('stairs.svg', :size => '50x50')
       = quiz.overall_difficulty
-    %li.quiz-info
+    %li.bullet-item.quiz-info
       = image_tag('star-rating.svg', :size => '50x50')
       = quiz.overall_rating
-    %li.quiz-info
+    %li.bullet-item.quiz-info
       = image_tag('user.svg', :size => '50x50')
       = quiz.owner
     %li.cta-button
@@ -78,3 +77,4 @@
         = render :partial => 'quizzes/customer', :locals => {:quiz => quiz}
       - else
         = render :partial => 'quizzes/anonymous', :locals => {:quiz => quiz}
+

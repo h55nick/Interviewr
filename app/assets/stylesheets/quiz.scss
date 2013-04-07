@@ -21,13 +21,13 @@ div.priv{
 }
 
 .quiz_list{
-  // background-color: #999;
+  background-color: #999;
   font-size: 24px;
 }
 .quiz_data{
   font-size: 24px;
   color: #999;
-  // background-color: #2a2a2a;
+  background-color: #2a2a2a;
   border-bottom: 1px solid #999;
   text-align: center;
 }
@@ -50,7 +50,7 @@ border: 0px !important;
 
 .pricing-table li
 {padding: 0px !important;
-background: #ddd !important;
+// background: #ddd !important;
 border: 0px !important;
 }
 
@@ -82,8 +82,8 @@ border: 0px !important;
 
 // *** TABLE TRIAL ***
 
-table.pricing-table{
-  width: 500px;
+.pricing-table{
+  width: 250px;
   float: left;
   display: inline;
   padding-top: 0;
@@ -91,18 +91,19 @@ table.pricing-table{
 
 .title.quiz-name{
   font-size: 32px;
-  width: 400px;
+  // width: 400px;
   margin-bottom: 20px;
+  text-align: left;
   // background-color: #eeeeee;
 }
 
-.price{
-  float: left;
-}
-.quiz-info{
-  float: left;
+// .price{
+//   float: left;
+// }
+// .quiz-info{
+//   float: left;
   // background-color: white;
-}
+// }
 
 table.analytics{
   border: 1px solid #3a3a3a;
@@ -120,7 +121,4 @@ h1.analytics{
   text-align: center;
   color: #eeeeee;
   margin-top: 0;
-}
-.price_row{
-  // background-color: white;
 }
