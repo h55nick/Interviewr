@@ -20,6 +20,6 @@
         %td.quiz_data= person.results.all.count
 
 #graph
-  :javascript
-    get_specific_chart("#{params[:id]}");
+  %script
+    graph.get_specific_chart("#{@quiz.id}");
 
