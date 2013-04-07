@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,700,900,100italic,700italic,900italic);
 
+.main{
+  margin-top: 35px;
+}
 #profile_pic{
   width: 250px;
   height: 250px;
@@ -8,48 +11,87 @@
 #bio{
   height: 200px;
   margin-left: 50px;
+  margin-bottom: 0;
+}
+.person_name{
+  margin-bottom: 0px
+}
+.bio_info{
+  color: #999;
+  margin-bottom: 0;
+  font-family: 'Lato', sans-serif;
 }
 #stats{
-  border: 1px solid #999;
+  border: 1px solid #2a2a2a;
   border-radius: 10px;
-  background-color: #999;
-  width: 400px;
+  background-color: #2a2a2a;
   float: left;
   margin-left: 50px;
   padding-left: 25px;
+  width: 660px;
+  margin-top: 0;
+  // height: 100px;
 
   .tests_taken.inline{
     padding-right: 50px;
+    margin-bottom: 25px;
   }
 
   .high_score.inline{
     padding-right: 50px;
+    margin-bottom: 25px;
   }
 
   .mosttags.inline{
     padding-right: 50px;
     text-align: center;
+    margin-bottom: 25px;
   }
 
+  .language_icon1.inline{
+    padding-right: 50px;
+  }
+
+  .language_icon2.inline{
+      padding-right: 50px;
+    }
+
   .score{
-      color: white;
+      color: #999;
       font-family: 'Lato', sans-serif;
       margin-bottom: 0;
+      padding-bottom: 10px;
       text-align: center;
       font-size: 24px;
       font-weight: bold;
     }
 
   .stat{
-    color: white;
+    color: #999;
     font-family: 'Lato', sans-serif;
   }
 }
-
+.map_layout{
+  margin-right: 40;
+  margin-left: 550px;
+  margin-top: 40px;
+}
 #map_canvas
 {
-  width: 50%;
+  width: 100%;
   height: 400px;
   border: 1px solid black;
   margin-bottom: 20px;
 }
+
+#add_question{
+  float: right;
+  border: 1px solid #999;
+}
+
+#add_question_button{
+  border: 1px solid #999;
+  margin-top: 25px;
+  float: right;
+}
+

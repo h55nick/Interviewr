@@ -2,18 +2,21 @@
 
 %table
   %tr
-    %th Name
-    %th Last Date
-    %th Last Score
-    %th Avg Score
-    %th Number of Attempts
-  -@quiz.people.each do |person|
-    %tr
-      %td= person.name
-      %td= person.results.last.created_at
-      %td= person.results.last.score
-      %td= number_to_percentage(@quiz.avgscore(person), :precision => 2)
-      %td= person.results.all.count
+    %th.quiz_data Name
+    %th.quiz_data Last Date
+    %th.quiz_data Last Score
+    %th.quiz_data Avg Score
+    %th.quiz_data Number of Attempts
+    -@quiz.people.each do |person|
+
+      %tr.quiz_list
+        %td.quiz_data= person.name
+        %td.quiz_data= person.results.last.created_at
+        %td.quiz_data= person.results.last.score
+        %td.quiz_data= number_to_percentage(@quiz.avgscore(person), :precision => 2)
+        %td.quiz_data= person.results.all.count
+
 #graph
   :javascript
     get_specific_chart("#{params[:id]}");
+

@@ -16,12 +16,21 @@ h1{
   font-family: 'Lato', sans-serif;
   font-weight: 300px;
 }
+
+#new{
+  float: left;
+  color: #ff6666;
+}
+
+#quizzes{
+  float: left;
+}
 .button{
   background-color: #999;
 }
 .sidebar{
-  border: 3px solid #456;
-  background-color: #999;
+  border: 3px solid #2a2a2a;
+  background-color: #2a2a2a;
   height: 700px;
   margin-top: 30px;
   font-family: 'Lato', sans-serif;
@@ -29,11 +38,11 @@ h1{
   font-weight: 100
 }
 p{
-  color: #456
+  color: #999
 }
 .new_quizzes{
-  border: 3px solid #999;
-  background-color: #999;
+  border: 3px solid #2a2a2a;
+  background-color: #2a2a2a;
   height: 700px;
   margin-top: 30px;
 }
@@ -44,7 +53,7 @@ p{
 }
 .logo{
   background-color: #999;
-  border: 1px solid #999;
+  margin-top: 15px;
 }
 .logo1{
   font-family: 'Lato', sans-serif;
@@ -62,21 +71,31 @@ p{
   color: #999;
 }
 .right.button-group {
-  width: 400px;
+  width: 530px;
+  float: right;
+  margin-top: 15px;
 
   li{
-  padding-right: 25px;
+  padding-right: 35px;
+  margin-bottom: 0;
   color: #3a3a3a;
     &:hover {
       color: #ff6666;
     }
+  #register_button{
+    margin-left: 10px;
+  }
+
+  #quizzes_button{
+    margin-left: 10px;
+  }
   }
 
   p {
   margin-bottom: 0;
+  margin-top: 0;
   font-size: 18px;
   font-family: 'Lato', sans-serif;
-  font-weight: bold;
   text-align: center;
   color: inherit;
   transition: color 0.5s;

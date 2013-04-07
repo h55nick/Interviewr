@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,700,900,100italic,700italic,900italic);
+
 .bton{
   border: 1px blue solid;
   text-align: center;
@@ -14,16 +16,73 @@ div.priv{
   background-color: red;
 }
 
-#addquestion{
+#quizzes{
+  width: 500px;
+}
 
+.quiz_list{
+  background-color: #999;
+  font-size: 24px;
+}
+.quiz_data{
+  font-size: 24px;
+  color: #999;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #999;
+}
+.form_underline{
+  border-bottom: #999;
+}
+table{
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  // background-color: #2a2a2a;
+  // border: #2a2a2a;
+  padding-top: 100px;
+  width: 750px;
+}
+#search-input{
+  width: 500px;
+  float: right;
+}
+.search_field{
+  background-image:url('search.svg');
+  background-position: 2%;
+  background-repeat: no-repeat;
+  background-size: 15px;
 }
 
 #graph{
   width: 500px;
   height: 500px;
 }
-#quiz
-{
+
+#quiz{
   background-color: white;
   padding: 20px;
+}
+.stripe-button{
+  background-color: #2a2a2a;
+  margin: 0;
+}
+
+// *** TABLE TRIAL ***
+
+table.pricing-table{
+  width: 500px;
+  float: left;
+  display: inline;
+  padding-top: 0;
+}
+
+.quiz-name{
+  font-size: 48px;
+  width: 400px;
+}
+
+.price{
+  float: left;
+}
+.quiz-info{
+  float: left;
 }

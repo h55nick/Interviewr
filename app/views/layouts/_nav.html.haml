@@ -6,7 +6,7 @@
   .small-9.columns
     %ul.right.button-group
       %li
-        =link_to(image_tag("pencil.svg", :size => '50x50'))
+        =link_to(image_tag("pencil.svg", :size => '50x50', :id => 'quizzes_button'))
         %p Quizzes
       %li
         =link_to(image_tag("find_developer.svg", :size => '50x50'))
@@ -14,16 +14,18 @@
         %p Talent
       - if @auth.nil?
         %li
-          =link_to(image_tag("new_person.svg", :size => '50x50'), new_person_path, :remote=>true)
+          =link_to(image_tag("new_person.svg", :size => '50x50'), new_person_path, :id => 'register_button', :remote=>true)
           %p Register
         #login.inline
-        %li
+        %li#login_button
           =link_to(image_tag("login.svg", :size => '50x50'), login_path, :remote=>true)
           %p Login
       - else
         %li
-          = link_to('Dashboard', person_path(@auth), :class=>'button', )
+          = link_to(image_tag("dashboard.svg", :size => '50x50'), person_path(@auth))
+          %p Dash
         %li
-          =link_to(image_tag("user.svg", :size => '50x50'), login_path, method:"DELETE")
+          =link_to(image_tag("login.svg", :size => '50x50'), login_path, method:"DELETE")
+          %p Logout
           / = link_to('Logout', login_path, :class=>'button alert', method:"DELETE")
 #pencil_nav
