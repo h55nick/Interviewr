@@ -9,14 +9,21 @@ class QuizzesController < ApplicationController
   def new
   end
   def graph
-    r = Result.all
-    names = r.map{|r| r.person.name}.uniq
-    # scores = r.map{|r| r.score}
-    # dates = r.map{|r| r.created_at}
+    quiz_id = params[:id]
+    @quiz = Quiz.where(:id => quiz_id).first
+    results = @quiz.results.map{|result| {name: result.person.name, score: result.score, date: result.created_at} }
 
     respond_to do |f|
       f.html #will error until an HTML template is made
-      f.js {render :json => r}
+      f.js {render :json => results}
+    end
+  end
+  def graph_all
+    results = Results.all.map{|result| {name: result.person.name, score: result.score, date: result.created_at} }
+
+    respond_to do |f|
+      f.html #will error until an HTML template is made
+      f.js {render :json => results}
     end
   end
 

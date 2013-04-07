@@ -12,12 +12,13 @@ RailJumper::Application.routes.draw do
     member do
       get :test
       post 'purchase'
+      get 'graph'
     end
 
     collection do
       get 'search'
       get 'filter/:tag_id', :action => :filter, :as => :filter
-      get 'graph'
+      get 'graph_all'
     end
   end
 
