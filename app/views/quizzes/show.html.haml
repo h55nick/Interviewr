@@ -1,6 +1,9 @@
-%h1= @quiz.name + " " + 'Analytics'
+/ %h1.analytics= @quiz.name + " " + 'Analytics'
 
-%table
+%h1.analytics= 'Analytics'
+%h3.analytics-sub= @quiz.name
+
+%table.analytics
   %tr
     %th.quiz_data Name
     %th.quiz_data Last Date

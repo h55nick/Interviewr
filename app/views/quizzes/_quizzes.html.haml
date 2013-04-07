@@ -29,7 +29,7 @@
       %td.quiz-name
         = link_to(quiz.name, quiz_path(quiz))
         / %em Great for small business
-    %tr
+    %tr.price_row
       %td.price
         = number_to_currency(quiz.total_cost)
         - if @auth.customer_id.present?
