@@ -1,5 +1,6 @@
 window.quiz =
     document_ready:->
+        console.log('quiz ready')
         $('.answers').hide();
         ###Question form ###
         $('#questionform').addClass('hide')

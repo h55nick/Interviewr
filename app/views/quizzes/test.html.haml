@@ -4,10 +4,10 @@
     -@quiz.exercises.each do |question|
       .question
         =question.question
-        %ol
-          -question.options.shuffle.each do |option|
-            %li.option{'data-correct'=>option.is_correct.to_s, 'data-selected'=>'false', 'data-oid'=>option.id}
-              =option.answer
+      %ol
+        -question.options.shuffle.each do |option|
+          %li.option{'data-correct'=>option.is_correct.to_s, 'data-selected'=>'false', 'data-oid'=>option.id}
+            =option.answer
     #stest.submit.bton{'data-qid'=>@quiz.id}
       Submit Quiz!
   .columns.large-3

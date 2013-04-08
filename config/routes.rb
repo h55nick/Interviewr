@@ -18,7 +18,7 @@ RailJumper::Application.routes.draw do
     collection do
       get 'search'
       get 'filter/:tag_id', :action => :filter, :as => :filter
-      get 'graph_all'
+     # get 'graph_all'
     end
   end
 

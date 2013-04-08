@@ -18,12 +18,13 @@ class QuizzesController < ApplicationController
     end
   end
   def graph_all
-    results = Results.all.map{|result| {name: result.person.name, score: result.score, date: result.created_at} }
+ # results = Results.all.map{|result| {name: result.person.name, score: result.score, date: result.created_at} }
 
-    respond_to do |f|
-      f.html #will error until an HTML template is made
-      f.js {render :json => results}
-    end
+    #respond_to do |f|
+     # f.html #will error until an HTML template is made
+      #f.js {render :json => results}
+    #end
+
   end
 
   def create
