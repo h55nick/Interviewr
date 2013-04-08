@@ -1,7 +1,7 @@
 window.graph =
   document_ready:->
       # graph.get_chart_all();
-      graph.get_specific_chart();
+      # graph.get_specific_chart();
       graph.display_chart()
 
   get_chart_all:->
