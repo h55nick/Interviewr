@@ -32,7 +32,7 @@
       %script
         map.display_map(0, 0, 1)
         = "map.add_marker(#{@person.lat}, #{@person.long}, '#{@person.name}');"
-    =link_to('Add Question', "#", :class => 'button radius', :id => 'add_question_button')
+    =link_to('Add Question', new_quiz_path, :class => 'button radius', :id => 'add_question_button')
 
   #graph
     graph goes here
