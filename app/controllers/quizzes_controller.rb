@@ -46,6 +46,7 @@ class QuizzesController < ApplicationController
     Stripe::Charge.create(customer: @auth.customer_id, amount: (quiz.total_cost * 100).to_i, description: quiz.name, currency: 'usd')
   rescue Stripe::CardError => @error
   end
+  # redirect_to(test_quiz_path(quiz.id)) # currently getting server error Started GET "/quizzes/NaN/graph"
   end
   def test
     if @auth.present?
@@ -64,7 +65,7 @@ class QuizzesController < ApplicationController
   end
   def filter
     tag = Tag.find(params[:tag_id])
-    @quizzes = tag.quizzesg
+    @quizzes = tag.quizzes
   end
   def search
     query = params[:query]
