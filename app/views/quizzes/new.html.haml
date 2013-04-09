@@ -1,7 +1,5 @@
-This is the new Quiz page
-
 .row
-  .large-5.columns
+  .large-5.columns.large-centered
     =text_field_tag 'name', nil, :placeholder => 'Quiz Name'
     Private
     #private.inline.bton.pub{'data-priv'=>"false"}
@@ -31,7 +29,7 @@ This is the new Quiz page
         .columns.large-2
           =link_to('Add Answer',"#",:class=> 'button inline small', :id=>'add_answer')
       Correct:
-      #correct.inline.bton{'data-correct'=>"false"}
+      #correct.inline.bton.pub{'data-correct'=>"false"}
         false
       #answerlist
         //render Partial if Edit
