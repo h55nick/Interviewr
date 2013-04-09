@@ -17,9 +17,7 @@ window.aj =
     $.ajax(settings)
   filter_quizzes: (e) ->
     query = $('#search').val()
-    console.log(query)
     if query.length == 0
-      console.log(query.length)
       settings =
         dataType: 'script'
         type: 'get'
