@@ -25,8 +25,8 @@ window.quiz =
                 $('#difficulty').attr("data-difficulty", ui.value)
                 #console.log( ui.value)
                 })
-
     show_questionform:->
+        console.log('show question form')
         $('#questionform').toggleClass('hide')
     show_answers:->
         $('.answers').slideUp()

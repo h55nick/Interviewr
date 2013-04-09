@@ -1,19 +1,44 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,700,900,100italic,700italic,900italic);
 
+label{
+  padding: 10px !important;
+}
 .bton{
   border: 1px blue solid;
   text-align: center;
   height: 30px;
-    line-height: 1.5em;
-    padding: 4px;
+  line-height: 1.5em;
+  padding: 4px;
+
+}
+
+#difficulty{
+  margin: 15px;
+}
+#createquestion{
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #eee;
+  margin-top: 10px;
+}
+#create_quiz{
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .pub{
-  width: 30px;
+  width: 50px;
   background: green;
+  border-radius: 10px;
 }
 div.priv{
   background-color: red;
+
 }
 
 

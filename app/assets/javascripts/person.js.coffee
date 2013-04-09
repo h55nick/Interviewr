@@ -1,6 +1,6 @@
 window.person =
   document_ready:->
-
+    console.log('person.ready')
   get_chart: (i)->
     id = parseInt(i)
     settings =
@@ -23,4 +23,4 @@ window.person =
       ymin: "auto"
       ymax: "auto"
     });
-$(document).ready(quiz.document_ready)
+$(document).ready(person.document_ready)
