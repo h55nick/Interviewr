@@ -61,9 +61,8 @@
       = link_to(quiz.name, quiz_path(quiz))
     %li.price
       = number_to_currency(quiz.total_cost)
-    / %li.quiz-info
-    /   %h3 Yay placeholder!
     %li.bullet-item.quiz-info
+      -binding.pry
       = image_tag('stairs.svg', :size => '50x50')
       = quiz.overall_difficulty
     %li.bullet-item.quiz-info
