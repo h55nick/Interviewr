@@ -73,8 +73,10 @@
 }
 .map_layout{
   margin-right: 40;
-  margin-left: 550px;
+  // margin-left: 550px;
   margin-top: 40px;
+  float: right;
+  width: 500px;
 }
 #map_canvas
 {
@@ -94,4 +96,10 @@
   margin-top: 25px;
   float: right;
 }
-
+.person
+{
+  width: 1000px;
+}
+.person_data{
+  color: #999;
+}

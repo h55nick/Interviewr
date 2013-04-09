@@ -13,9 +13,18 @@
       %br
       %br
       %p Top Quizzes
-      %p 1. Ruby Basics
-      %p 2. Advanced Python
-      %p 3. Javascript Explosion
+      .top_quizzes
+        = image_tag('ruby-icon.jpg', :size => '50x50', :class => 'top-pic')
+        %p.top-pic Ruby Basics
+      .top_quizzes
+        = image_tag('python-icon.png', :size => '50x50', :class => 'top-pic')
+        %p Advanced Python
+      .top_quizzes
+        = image_tag('jquery-icon.png', :size => '50x50', :class => 'top-pic', :id => 'jquery-icon')
+        %p Jquery Bingo
+      .top_quizzes
+        = image_tag('dj-icon.png', :size => '50x50', :class => 'top-pic')
+        %p Django Essentials
   .columns.small-9
     .new_quizzes
       %p.new_quizzes_text#new New
