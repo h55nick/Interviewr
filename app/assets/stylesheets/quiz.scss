@@ -16,8 +16,10 @@ div.priv{
   background-color: red;
 }
 
-#quizzes{
-  width: 500px;
+
+#quizzes a{
+  text-decoration: none;
+  text-align: center;
 }
 
 .quiz_list{
@@ -40,19 +42,15 @@ table{
   background-color: #2a2a2a !important;
   border: #2a2a2a !important;
   padding-top: 100px;
-  width: 750px;
-}
-.pricing-table
-{padding: 5px !important;
-background: #ddd !important;
-border: 0px !important;
+  width: 900px;
 }
 
-.pricing-table li
-{padding: 0px !important;
-// background: #ddd !important;
-border: 0px !important;
-}
+
+// .pricing-table li
+// {padding: 0px !important;
+// // background: #ddd !important;
+// border: 0px !important;
+// }
 
 
 #search-input{
@@ -80,21 +78,35 @@ border: 0px !important;
   margin: 0;
 }
 
+.stripe-button-el{
+  margin-top: 20px;
+}
+
 // *** TABLE TRIAL ***
 
 .pricing-table{
   width: 250px;
   float: left;
-  display: inline;
-  padding-top: 0;
+  // display: inline;
+  // padding-top: 0;
+  padding: 5px !important;
+  background: #ddd !important;
+  border: 0px !important;
+  margin: 41px;
+}
+
+.pricing-table li{
+  padding: 0px !important;
+  border: 0px !important;
 }
 
 .title.quiz-name{
   font-size: 32px;
   // width: 400px;
+  margin-top: 20px;
   margin-bottom: 20px;
-  text-align: left;
-  // background-color: #eeeeee;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 // .price{
@@ -102,12 +114,11 @@ border: 0px !important;
 // }
 // .quiz-info{
 //   float: left;
-  // background-color: white;
 // }
 
 table.analytics{
   border: 1px solid #3a3a3a;
-  margin-left: 130px;
+  margin-left: 65px;
 }
 h1.analytics{
  font-family: 'Lato', sans-serif;
@@ -121,4 +132,11 @@ h1.analytics{
   text-align: center;
   color: #eeeeee;
   margin-top: 0;
+}
+#addquestion{
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+#add-quiz{
+  text-align: center;
 }

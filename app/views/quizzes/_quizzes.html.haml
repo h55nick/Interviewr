@@ -1,66 +1,9 @@
-/ %table
-/   %tr.form_underline
-/     %th
-/     %th.quiz_data Name
-/     %th.quiz_data Price
-/     %th.quiz_data Difficulty
-/     %th.quiz_data Rating
-/     %th.quiz_data Owner
-/   - @quizzes.each do |quiz|
-
-/     %tr.form_underline
-/       %td
-/         - if @auth.customer_id.present?
-/           = render :partial => 'quizzes/customer', :locals => {:quiz => quiz}
-/         - else
-/           = render :partial => 'quizzes/anonymous', :locals => {:quiz => quiz}
-/       / %td.quiz_data= (image_tag 'ruby-icon.jpg', :size => '50x50')
-/       %td.quiz_data= link_to(quiz.name, quiz_path(quiz))
-/       %td.quiz_data= number_to_currency(quiz.total_cost)
-/       %td.quiz_data= quiz.overall_difficulty
-/       %td.quiz_data= quiz.overall_rating
-/       %td.quiz_data= quiz.owner
-
-/ - @quizzes.each do |quiz|
-
-/   %table.pricing-table
-/     / %thead
-/     %tr
-/       %td.quiz-name
-/         = link_to(quiz.name, quiz_path(quiz))
-/         / %em Great for small business
-/     %tr.price_row
-/       %td.price
-/         = number_to_currency(quiz.total_cost)
-/         - if @auth.customer_id.present?
-/           = render :partial => 'quizzes/customer', :locals => {:quiz => quiz}
-/         - else
-/           = render :partial => 'quizzes/anonymous', :locals => {:quiz => quiz}
-/     %tbody
-/       %tr.quiz-info
-/         %td.quiz-icon
-/           = image_tag('stairs.svg', :size => '50x50')
-/           = quiz.overall_difficulty
-/       %tr.quiz-info
-/         %td.quiz-icon
-/           = image_tag('star-rating.svg', :size => '50x50')
-/           = quiz.overall_rating
-/       %tr.quiz-info
-/         %td
-/           = image_tag('user.svg', :size => '50x50')
-/           = quiz.owner
-/       %tr.heart-icon
-/         %td 1TB Bandwidth
-/     %tfoot
-/       %tr
-/         %td Known locally as "SoMa", this neighborhood was home to the dot.com boom and boasts.
-
 - @quizzes.each do |quiz|
   %ul.pricing-table
     %li.title.quiz-name
       = link_to(quiz.name, quiz_path(quiz))
-    %li.price
-      = number_to_currency(quiz.total_cost)
+    / %li.price
+    /   = number_to_currency(quiz.total_cost)
     / %li.quiz-info
     /   %h3 Yay placeholder!
     %li.bullet-item.quiz-info
@@ -72,6 +15,9 @@
     %li.bullet-item.quiz-info
       = image_tag('user.svg', :size => '50x50')
       = quiz.owner
+    %li.price
+      = image_tag('dollar.svg', :size => '50x50')
+      = number_to_currency(quiz.total_cost)
     %li.cta-button
       - if @auth.customer_id.present?
         = render :partial => 'quizzes/customer', :locals => {:quiz => quiz}
