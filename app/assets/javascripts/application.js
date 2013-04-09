@@ -18,3 +18,4 @@
 //= require stripe
 //= require map
 //= require test
+//= require person

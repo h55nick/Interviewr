@@ -3,4 +3,4 @@
         :'data-label' => number_to_currency(quiz.total_cost),
         :'data-amount' => quiz.total_cost * 100,
         :'data-key' => Rails.configuration.stripe[:publishable_key]}
-= form_tag purchase_quiz_path(quiz), :remote => true do end
+= form_tag purchase_quiz_path(quiz) do end

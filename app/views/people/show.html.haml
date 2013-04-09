@@ -25,7 +25,22 @@
     %p.bio_info I'm a former computer science professor at the University of Timbuktu and now I'm learning Ruby.
   #test_table
     //=render "test_table"
-    Table stuff here
+    Interviews Taken
+  %table.person
+    %tr
+      %th.person_data Name
+      %th.person_data Date
+      %th.person_data Score
+      %th.person_data Correct
+      %th.person_data Incorrect
+      -@person.quizzes.each do |quiz|
+
+        %tr.quiz_list
+          %td.quiz_data= quiz.name
+          %td.quiz_data= quiz.results.last.created_at
+          %td.quiz_data= quiz.results.last.score
+          / %td.quiz_data= number_to_percentage(person.avgscore(person), :precision => 2)
+          / %td.quiz_data= quiz.results.all.count
 
   .map_layout
     #map_canvas
@@ -35,5 +50,8 @@
     =link_to('Add Question', new_quiz_path, :class => 'button radius', :id => 'add_question_button')
 
   #graph
-    graph goes here
+    %script
+      person.display_chart()
+      person.get_chart("#{@person.id}");
+
 

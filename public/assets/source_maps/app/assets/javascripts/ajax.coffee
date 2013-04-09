@@ -17,11 +17,18 @@ window.aj =
     $.ajax(settings)
   filter_quizzes: (e) ->
     query = $('#search').val()
-    settings =
-      dataType: 'script'
-      type: 'get'
-      url: "/quizzes/search?query=#{query}"
-    $.ajax(settings)
+    if query.length == 0
+      settings =
+        dataType: 'script'
+        type: 'get'
+        url: "/quizzes"
+      $.ajax(settings)
+    else
+      settings =
+        dataType: 'script'
+        type: 'get'
+        url: "/quizzes/search?query=#{query}"
+      $.ajax(settings)
   add_tags:(e)->
     e.preventDefault
     tags = $('#tags').val()

@@ -7,6 +7,8 @@ gem 'haml'
 gem 'bcrypt-ruby'
 gem 'geocoder'
 gem 'stripe'
+gem 'twilio-ruby'
+gem 'aws-ses'
 
 gem 'carrierwave'
 gem 'rmagick'

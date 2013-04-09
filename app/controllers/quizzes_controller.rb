@@ -47,7 +47,10 @@ class QuizzesController < ApplicationController
     Stripe::Charge.create(customer: @auth.customer_id, amount: (quiz.total_cost * 100).to_i, description: quiz.name, currency: 'usd')
   rescue Stripe::CardError => @error
   end
-  # redirect_to(test_quiz_path(quiz.id)) # currently getting server error Started GET "/quizzes/NaN/graph"
+  client = Twilio::REST::Client.new(ENV['TW_SID'], ENV['TW_TOK'])
+  body = "Congratulations on your quiz purchase. Good luck on #{quiz.name}"
+  client.account.sms.messages.create(:from => '+16468635581', :to => @auth.phone, :body => body)
+  redirect_to(test_quiz_path(quiz.id))
   end
   def test
     if @auth.present?
@@ -60,6 +63,7 @@ class QuizzesController < ApplicationController
     if @auth.present?
       @result = Result.create(quiz_id:params[:qid],score:params[:score])
       @auth.results << @result
+      Notifications.test_completed_message(@auth).deliver
     else
       @result = false
     end
