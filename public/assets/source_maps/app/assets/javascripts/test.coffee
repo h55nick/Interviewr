@@ -1,5 +1,6 @@
 window.test =
     docready:->
+      console.log('test.ready')
       $('body').on('click','.option',test.aselect)
       $('body').on('click','#stest',test.calc_score)
       $('body').on('click',"#seecorrect",test.show_correct)
@@ -30,11 +31,6 @@ window.test =
             $(option).addClass('correct')
           else
             $(option).addClass('incorrect')
-
-
-
-
-
 
 
 $(document).ready(test.docready)

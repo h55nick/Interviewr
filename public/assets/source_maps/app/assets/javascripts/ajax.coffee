@@ -1,7 +1,9 @@
 window.aj =
   ready: ->
+    console.log('aj.ready')
     $('body').on('keyup', '#search', aj.filter_quizzes)
   create_quiz:(e)->
+    console.log("Create Quiz")
     name = $('#name').val();
     exercises = []
     exercises = $.makeArray($("[data-eid]").map(->
@@ -30,6 +32,7 @@ window.aj =
         url: "/quizzes/search?query=#{query}"
       $.ajax(settings)
   add_tags:(e)->
+    console.log('add tags')
     e.preventDefault
     tags = $('#tags').val()
     settings =
@@ -38,6 +41,7 @@ window.aj =
       url: "/tags?tags=#{tags}"
     $.ajax(settings)
   add_answer:->
+    console.log('adding answers')
     answer = $('#answer').val()
     correct = $('#correct').attr('data-correct');
     settings =
@@ -46,6 +50,7 @@ window.aj =
       url: "/options?answer=#{answer}&correct=#{correct}"
     $.ajax(settings)
   add_question:->
+    console.log('adding question')
     tags = []
     tags = $.makeArray($("[data-tid]").map(->
           $(this).attr "data-tid"

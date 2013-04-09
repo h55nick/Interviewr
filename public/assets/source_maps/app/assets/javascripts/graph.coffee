@@ -2,8 +2,7 @@ window.graph =
   document_ready:->
       # graph.get_chart_all();
       # graph.get_specific_chart();
-
-
+      console.log('graph.ready')
   get_chart_all:->
     settings =
       dataType: 'json'
