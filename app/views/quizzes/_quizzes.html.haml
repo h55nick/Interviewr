@@ -15,7 +15,7 @@
     %li.bullet-item.quiz-info
       = image_tag('user.svg', :size => '50x50')
       = quiz.owner
-    %li.price
+    %li.bullet-item.quiz-info.price
       = image_tag('dollar.svg', :size => '50x50')
       = number_to_currency(quiz.total_cost)
     %li.cta-button
