@@ -33,19 +33,24 @@
   // height: 100px;
 
   .tests_taken.inline{
-    padding-right: 50px;
+    padding-right: 75px;
     margin-bottom: 25px;
   }
 
   .high_score.inline{
-    padding-right: 50px;
+    padding-right: 75px;
     margin-bottom: 25px;
   }
 
   .mosttags.inline{
-    padding-right: 50px;
+    padding-right: 75px;
     text-align: center;
     margin-bottom: 25px;
+  }
+
+  .hailsfrom.inline{
+    padding-right: 75px;
+    text-align: center;
   }
 
   .language_icon1.inline{
@@ -76,7 +81,7 @@
   // margin-left: 550px;
   margin-top: 40px;
   float: right;
-  width: 500px;
+  width: 450px;
 }
 #map_canvas
 {
@@ -92,14 +97,20 @@
 }
 
 #add_question_button{
-  border: 1px solid #999;
+  border: 1px solid #ff6666;
+  background-color: #ff6666;
   margin-top: 25px;
   float: right;
 }
 .person
 {
   width: 1000px;
+  margin-bottom: 50px;
 }
 .person_data{
   color: #999;
+}
+#test_table{
+  color: #ff6666;
+  margin-bottom: 15px;
 }
