@@ -73,7 +73,6 @@
       = image_tag('user.svg', :size => '50x50')
       = quiz.owner
     %li.cta-button
-      -binding.pry
       - if @auth.customer_id.present?
         = render :partial => 'quizzes/customer', :locals => {:quiz => quiz}
       - else
