@@ -8,15 +8,51 @@
       %br
       %br
       %br
-      %br
-      %br
-      %br
-      %br
       %p Top Quizzes
-      %p 1. Ruby Basics
-      %p 2. Advanced Python
-      %p 3. Javascript Explosion
+      .top_quizzes
+        = image_tag('ruby-icon.jpg', :size => '50x50', :class => 'top-pic')
+        %p.top-pic Ruby Basics
+      .top_quizzes
+        = image_tag('python-icon.png', :size => '50x50', :class => 'top-pic')
+        %p Advanced Python
+      .top_quizzes
+        = image_tag('jquery-icon.png', :size => '50x50', :class => 'top-pic', :id => 'jquery-icon')
+        %p Jquery Bingo
+      .top_quizzes
+        = image_tag('dj-icon.png', :size => '50x50', :class => 'top-pic')
+        %p Django Essentials
   .columns.small-9
     .new_quizzes
       %p.new_quizzes_text#new New
       %p.new_quizzes_text#quizzes  Quizzes
+      #sample-quiz1
+        = image_tag('ruby-icon.jpg', :size => '50x50', :class => 'top-pic')
+        %h2.sample Rubyriffic
+      .sample-quiz
+        = image_tag('dj-icon.png', :size => '50x50', :class => 'top-pic')
+        %h2.sample Django Unchained
+      .sample-quiz
+        = image_tag('css3-logo.png', :size => '50x50', :class => 'top-pic')
+        %h2.sample CSS:Crazy Sexy Squared
+      .sample-quiz
+        = image_tag('ember.png', :size => '50x50', :class => 'top-pic')
+        %h2.sample I Remember Ember
+      .sample-quiz
+        = image_tag('Handlebars.png', :size => '50x50', :class => 'top-pic')
+        %h2.sample Take a Ride on My Handlebars
+
+
+      / %li.title.quiz-name
+      /   = link_to(quiz.name, quiz_path(quiz))
+      / %li.bullet-item.quiz-info
+      /   = image_tag('stairs.svg', :size => '50x50')
+      /   = quiz.overall_difficulty
+      / %li.bullet-item.quiz-info
+      /   = image_tag('star-rating.svg', :size => '50x50')
+      /   = quiz.overall_rating
+      / %li.bullet-item.quiz-info
+      /   = image_tag('user.svg', :size => '50x50')
+      /   = quiz.owner
+      / %li.bullet-item.quiz-info.price
+      /   = image_tag('dollar.svg', :size => '50x50')
+      /   = number_to_currency(quiz.total_cost)

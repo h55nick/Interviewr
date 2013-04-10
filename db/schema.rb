@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406010343) do
+ActiveRecord::Schema.define(:version => 20130410001419) do
 
   create_table "exercises", :force => true do |t|
     t.text     "question"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(:version => 20130406010343) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "quiz_id"
+  end
+
+  create_table "exercises_tags", :id => false, :force => true do |t|
+    t.integer "exercise_id"
+    t.integer "tag_id"
   end
 
   create_table "options", :force => true do |t|
@@ -43,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20130406010343) do
     t.float    "balance"
     t.float    "lat"
     t.float    "long"
-    t.integer  "customer_id"
+    t.string   "customer_id"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
     t.boolean  "is_house",        :default => false

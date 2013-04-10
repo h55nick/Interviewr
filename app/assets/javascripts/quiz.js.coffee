@@ -3,7 +3,7 @@ window.quiz =
         console.log('quiz ready')
         $('.answers').hide();
         ###Question form ###
-        $('#questionform').addClass('hide')
+        $('#questionform').slideUp()
         $('#addquestion').click(quiz.show_questionform)
         $('#createquestion').click(aj.add_question)
         $('#difficulty').attr('data-difficulty',5)
@@ -27,7 +27,7 @@ window.quiz =
                 })
     show_questionform:->
         console.log('show question form')
-        $('#questionform').toggleClass('hide')
+        $('#questionform').slideDown()
     show_answers:->
         $('.answers').slideUp()
         $(this).children().slideDown()
@@ -41,6 +41,12 @@ window.quiz =
         $(this).attr('data-correct', !current)
         $(this).text(!current)
         $(this).toggleClass('correct')
+    clear_question_form:->
+        $('#questionform').slideUp()
+        $('#taglist').empty()
+        $('#answerlist').empty()
+        $('#question').val('')
+        $('#cost').val('')
 
 
 
