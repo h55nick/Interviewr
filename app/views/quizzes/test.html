@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Portfolio</title>
+    <meta name="author" content="Victor Coulon">
+    <meta name="description" content="jQuery plugin for creating an unique page transitioning system">
+    <link rel="stylesheet" href="curtain.css">
+    <link rel="stylesheet" href="test.scss">
+</head>
+<body>
+
+<ol class="curtains">
+    <li id="section-5">
+      <p id="ido">I do:</p>
+      <p id="html">Ruby, Rails, JSON</p>
+      <p id="java">Javascript</p>
+      <p id="jquery">jQuery</p>
+      <p id="ruby">HTML5, CSS3</p>
+    </li>
+
+    <li id="section-5">
+      <p id="ido">I do:</p>
+      <p id="html">Ruby, Rails, JSON</p>
+      <p id="java">Javascript</p>
+      <p id="jquery">jQuery</p>
+      <p id="ruby">HTML5, CSS3</p>
+    </li>
+
+</ol>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../curtain.js"></script>
+<script>
+    $(function(){
+       $('.curtains').curtain({
+           scrollSpeed: 300,
+           controls: '.menu',
+           curtainLinks: '.curtain-links',
+           nextSlide: function(){
+            console.log("ok");
+           }
+       });
+    });
+</script>
+</body>
+</html>

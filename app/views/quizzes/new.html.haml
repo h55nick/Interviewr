@@ -1,3 +1,5 @@
+%h1 Add a Quiz
+
 .row
   .large-5.columns.large-centered
     =text_field_tag 'name', nil, :placeholder => 'Quiz Name'
@@ -37,4 +39,4 @@
         Create Question
 .row
   .columns.large-8.large-centered
-    =link_to('Create Quiz',"#",:id=>'create_quiz')
+    =link_to('Create Quiz',"#",:id=>'create_quiz', :class => 'button inline small')
