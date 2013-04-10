@@ -3,13 +3,16 @@
 label{
   padding: 10px !important;
 }
+.label{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 .bton{
-  border: 1px blue solid;
+
   text-align: center;
   height: 30px;
   line-height: 1.5em;
   padding: 4px;
-
 }
 
 #difficulty{
@@ -19,14 +22,12 @@ label{
   text-decoration: none;
   border-radius: 10px;
   display: inline-block;
-  background-color: #eee;
   margin-top: 10px;
 }
 #create_quiz{
   text-decoration: none;
   border-radius: 10px;
   display: inline-block;
-  background-color: #eee;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -38,8 +39,21 @@ label{
 }
 div.priv{
   background-color: red;
-
 }
+.tag{
+  padding: 10px;
+  background-color: grey;
+  margin: 5px;
+  border-radius: 5px;
+  color: #eee;
+}
+#correct{
+  background: red;
+}
+#correct.correct{
+    background: green;
+  }
+
 
 
 #quizzes a{

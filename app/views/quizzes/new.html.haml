@@ -12,11 +12,11 @@
     #addquestion.bton
       Add Question
     #questionform
-      Question
+      .label.radius Question
       =text_field_tag 'question', nil, :placeholder => 'Ask me..'
-      Cost
+      .label.radius Cost
       =text_field_tag 'cost'
-      Difficulty
+      .label.radius Difficulty
       #difficulty
       #tagform.row
         .columns.large-9
@@ -35,7 +35,7 @@
         false
       #answerlist
         //render Partial if Edit
-      #createquestion.bton
+      #createquestion.button.small
         Create Question
 .row
   .columns.large-8.large-centered
