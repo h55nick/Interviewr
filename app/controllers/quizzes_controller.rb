@@ -29,7 +29,6 @@ class QuizzesController < ApplicationController
 
   def create
     @quiz = Quiz.create(name:params[:name]) if params[:name].present?
-        binding.pry
     if @quiz.present? && params[:exercises].present?
       params[:exercises].each do |e|
         @e = Exercise.find(e.to_i)
@@ -39,7 +38,6 @@ class QuizzesController < ApplicationController
         @e.is_public = !params[:priv]
         @quiz.save
       end
-          binding.pry
     end
 
   end
