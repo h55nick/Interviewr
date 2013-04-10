@@ -49,8 +49,12 @@ class Quiz < ActiveRecord::Base
       diffs << diff
       end
       total = diffs.reduce(:+).to_f
-      average = total/(self.exercises.count).to_i
-      average = (average * 100).round.to_f / 100
+      if total > 0
+        average = total/(self.exercises.count).to_i
+        average = (average * 100).round.to_f / 100
+      else
+        average = 0
+      end
   end
 
   def overall_rating
@@ -60,8 +64,12 @@ class Quiz < ActiveRecord::Base
       ratings << rating
       end
       total = ratings.reduce(:+).to_f
-      average = total/(self.exercises.count).to_i
-      average = (average * 100).round.to_f / 100
+      if total > 0
+        average = total/(self.exercises.count).to_i
+        average = (average * 100).round.to_f / 100
+      else
+        average = 0
+      end
   end
 
 end
