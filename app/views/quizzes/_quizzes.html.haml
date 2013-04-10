@@ -2,6 +2,8 @@
   %ul.pricing-table
     %li.title.quiz-name
       = link_to(quiz.name, quiz_path(quiz))
+    %li.price
+      = number_to_currency(quiz.total_cost)
     / %li.price
     /   = number_to_currency(quiz.total_cost)
     / %li.quiz-info

@@ -30,6 +30,7 @@ describe Tag do
 
   describe '#quizzes' do
     it 'list quizzes that have a specific tag' do
+      tag = Tag.new
       tag.quizzes << quiz
       expect(tag.quizzes.first).to eq quiz
     end
