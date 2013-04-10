@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20130410001419) do
     t.float    "balance"
     t.float    "lat"
     t.float    "long"
-    t.string   "customer_id"
+    t.integer  "customer_id"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
     t.boolean  "is_house",        :default => false
