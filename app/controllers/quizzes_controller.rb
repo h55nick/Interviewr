@@ -29,12 +29,19 @@ class QuizzesController < ApplicationController
 
   def create
     @quiz = Quiz.create(name:params[:name]) if params[:name].present?
+        binding.pry
     if @quiz.present? && params[:exercises].present?
       params[:exercises].each do |e|
-        @quiz.exercises << ex = Exercise.find(e)
-        ex.is_public = !params[:priv]
+        @e = Exercise.find(e.to_i)
+        @e.tags.map{|tag| @quiz.tags << tag}
+        @quiz.tags.uniq!
+        @quiz.exercises << @e
+        @e.is_public = !params[:priv]
+        @quiz.save
       end
+          binding.pry
     end
+
   end
   def purchase
     quiz = Quiz.find(params[:id])

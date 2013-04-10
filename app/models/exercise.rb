@@ -16,7 +16,7 @@
 
 class Exercise < ActiveRecord::Base
   attr_accessible :question, :difficulty, :rating, :cost, :owner_id, :is_public, :code
-  has_many :tags
+  has_and_belongs_to_many :tags
   has_many :options
   belongs_to :quiz
 end
